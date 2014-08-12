@@ -1,56 +1,7 @@
-/*********************************/
-/*****   Bootstrap Styling   *****/
-
-.navbar-inverse {
-  /*background-color: gray;*/
-  background-color: black;
-  color: white;
-}
-
-.navbar-brand {  
-  font-family: 'Quicksand', sans-serif; 
-  /*color: black !important;*/
-}
-
-ul.nav.navbar-nav a { 
-  color: white;  
-  margin: 0 20px;
-  font-family: 'Quicksand', sans-serif;
-}
-
-ul.nav.navbar-nav a:hover {
-  background: lightgray;
-  color: black;  
-  /*color: white;*/
-}
-
-div.navbar-header a.navbar-brand:hover{
-  color: red;  
-}
-
-.navbar-toggle {
-  background-color: black;
-  color: white;
-}
-
-/*.carousel-caption {
-  font-size: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  color: black;
-}
-
-.carousel-caption p {
-  font-size: 12px;
-  padding: 0 20px;
-}*/
-
-/*****   end Bootstrap Styling   *****/
-/*************************************/
-
 
 body{
   padding: 0;
-  margin: 0; 
+  margin: 0;    
 }
 
 img {
@@ -89,7 +40,7 @@ p {
 
 #intro-block {
   width: 100%; 
-  background: url("../images/_NWP7594.jpg") repeat-x;  
+  background: url("/assets/NWP7594.JPG") repeat-x;  
 }
 
 #intro-block p {

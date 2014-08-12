@@ -54,8 +54,7 @@ Jggalleries.Router = Backbone.Router.extend({
 
 })
  
-function removeActiveClass(){
-  // $(".home-menu").removeClass("active");
+function removeActiveClass(){ 
   $(".about-menu").removeClass("active");
   $(".jazz-menu").removeClass("active");
   $(".portfolio-menu").removeClass("active");

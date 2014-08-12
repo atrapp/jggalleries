@@ -12,11 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require underscore
 //= require backbone
 //= require jggalleries
-//= require scripts
+//= require parallax
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

@@ -40,4 +40,6 @@ gem 'spring',        group: :development
 
 gem 'backbone-on-rails'
 
+gem "twitter-bootstrap-rails"
+
 
