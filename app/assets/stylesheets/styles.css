@@ -1,0 +1,159 @@
+/*********************************/
+/*****   Bootstrap Styling   *****/
+
+.navbar-inverse {
+  /*background-color: gray;*/
+  background-color: black;
+  color: white;
+}
+
+.navbar-brand {  
+  font-family: 'Quicksand', sans-serif; 
+  /*color: black !important;*/
+}
+
+ul.nav.navbar-nav a { 
+  color: white;  
+  margin: 0 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+ul.nav.navbar-nav a:hover {
+  background: lightgray;
+  color: black;  
+  /*color: white;*/
+}
+
+div.navbar-header a.navbar-brand:hover{
+  color: red;  
+}
+
+.navbar-toggle {
+  background-color: black;
+  color: white;
+}
+
+/*.carousel-caption {
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.carousel-caption p {
+  font-size: 12px;
+  padding: 0 20px;
+}*/
+
+/*****   end Bootstrap Styling   *****/
+/*************************************/
+
+
+body{
+  padding: 0;
+  margin: 0; 
+}
+
+img {
+  width: 100%;
+  position: relative;
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.image-banner{ 
+  height: 30em;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#intro-block {
+  width: 100%; 
+  background: url("../images/_NWP7594.jpg") repeat-x;  
+}
+
+#intro-block p {
+  width: 400px;
+  height: 450px;
+  margin-top: 70px;  
+  padding: 50px;  
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.information { 
+  margin: 0;
+  padding: 50px 10px 50px 50px;
+  background-color: lightgray;
+  /*color: white;*/
+}
+
+.information p {
+  padding-top: 20px;
+  margin-right: 20px; 
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 16px;
+}
+
+#video, #about {
+  padding: 50px 0;
+}
+
+#about {
+  width: 500px;
+  font-size: 20px;  
+}
+
+.jazz_image {
+  width: 400px;
+  padding: 20px;
+}
+
+.portfolio_image {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%; 
+  padding: 20px;
+}
+
+figcaption {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+#footer {
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+#footer p {
+  padding: 60px 20px 20px 50px;
+  font-family: 'Quicksand', sans-serif; 
+}
