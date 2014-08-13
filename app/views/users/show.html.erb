@@ -1,3 +1,21 @@
-<%= image_tag @user.avatar.url %>
-<%= image_tag @user.avatar.url(:medium) %>
-<%= image_tag @user.avatar.url(:thumb) %>
+<h2>Show User</h2>
+
+<div>
+    <p><%= @user.username %></p>
+    <div class="avatar_medium"><%= image_tag @user.avatar.url(:medium) %></div>
+    <a href="/users/<%= @user.id %>/delete_avatar"><button>delete Avatar</button></a>
+</div>
+
+<a class="left" href="/users/<%= @user.id %>/edit"><button>EDIT</button></a>
+
+<form class="left" action="/users/<%= @user.id%>" method="post">
+    <%= token_tag %>
+    <input type="hidden" name="_method" value="delete">
+    <button>DELETE</button>   
+</form>
+
+<a class="left" href="/users"><button>Show all Users</button></a>
+
+<div class="clear"></div>
+
+
