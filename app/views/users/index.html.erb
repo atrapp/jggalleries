@@ -1,0 +1,13 @@
+
+<h2>All users</h2>
+
+
+<% @users.each do |user| %>
+    <ul>
+        <li><%= image_tag user.avatar.url %></li>
+        <li><%= image_tag user.avatar.url(:medium) %></li>
+        <li><%= image_tag user.avatar.url(:thumb) %></li>
+    </ul>        
+<% end %>
+
+

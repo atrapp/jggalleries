@@ -42,4 +42,4 @@ gem 'backbone-on-rails'
 
 gem "twitter-bootstrap-rails"
 
-
+gem "paperclip", "~> 4.1"
