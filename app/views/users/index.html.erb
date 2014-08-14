@@ -4,8 +4,9 @@
     <ul>
         <li>
             <p><%= user.username %></p>
-            <div class="avatar_thumb"><%= image_tag(user.avatar.url(:thumb)) %></div>
+            <div class="avatar_thumb"><img src="<%= user.avatar.url %>" /></div>
             <a href="/users/<%= user.id %>"><button>show User</button></a>
        </li>        
     </ul>    
 <% end %>
+
