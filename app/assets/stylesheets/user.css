@@ -1,15 +1,11 @@
-.avatar_thumb {
-  /*float: left;*/
+.avatar_thumb { 
   width: 100px;
-  height: 100px;
   margin: 10px;
-  border: 1px solid black;
+  border: 1px solid black; 
 }
 
-.avatar_medium {
-  /*float: left;*/
+.avatar_medium { 
   width: 300px;
-  height: 300px;
   margin: 10px;
   border: 1px solid black;
 }
