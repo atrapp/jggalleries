@@ -2,7 +2,7 @@
 
 <div>
     <p><%= @user.username %></p>
-    <div class="avatar_medium"><img src="<%= @user.avatar.url %>" /></div>
+    <div class="avatar_medium"><%= image_tag(@user.avatar.url(:medium)) %></div>
     <a href="/users/<%= @user.id %>/delete_avatar"><button>delete Avatar</button></a>
 </div>
 
@@ -17,4 +17,3 @@
 <a class="left" href="/users"><button>Show all Users</button></a>
 
 <div class="clear"></div>
-
