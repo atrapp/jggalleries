@@ -41,7 +41,7 @@ p {
 #intro-block {
   width: 100%; 
   /*background: url("/assets/NWP7594.JPG") repeat-x;  */
-  background: image_url("NWP7594.JPG") repeat-x;  
+  background: image-url("NWP7594.JPG");  
 
 }
 
@@ -85,8 +85,8 @@ p {
 }
 
 .portfolio_image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%; 
   padding: 20px;
 }
