@@ -40,7 +40,9 @@ p {
 
 #intro-block {
   width: 100%; 
-  background: url("/assets/NWP7594.JPG") repeat-x;  
+  /*background: url("/assets/NWP7594.JPG") repeat-x;  */
+  background: image_url("NWP7594.JPG") repeat-x;  
+
 }
 
 #intro-block p {
