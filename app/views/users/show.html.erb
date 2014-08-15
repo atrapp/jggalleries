@@ -2,7 +2,12 @@
 
 <div>
     <p><%= @user.username %></p>
-    <div class="avatar_medium"><img src="<%= @user.avatar.url(:medium) %>" /></div>
+    <div class="avatar_medium">
+        <a href="<%= @user.avatar.url %>" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >
+            <img src="<%= @user.avatar.url(:medium) %>" />
+        </a>
+    </div>
     <a href="/users/<%= @user.id %>/delete_avatar"><button>delete Avatar</button></a>
 </div>
 
@@ -17,3 +22,4 @@
 <a class="left" href="/users"><button>Show all Users</button></a>
 
 <div class="clear"></div>
+

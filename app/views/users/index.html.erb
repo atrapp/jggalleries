@@ -4,7 +4,11 @@
     <ul>
         <li>
             <p><%= user.username %></p>
-            <div class="avatar_thumb"><img src="<%= user.avatar.url(:thumb) %>" /></div>
+            <div class="avatar_thumb">
+                <a href="<%= user.avatar.url(:medium) %>" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >
+                    <img src="<%= user.avatar.url(:thumb) %>" />
+                </a>
+            </div>
             <a href="/users/<%= user.id %>"><button>show User</button></a>
        </li>        
     </ul>    
