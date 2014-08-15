@@ -2,7 +2,7 @@
 
 <div>
     <p><%= @user.username %></p>
-    <div class="avatar_medium"><img src="<%= user.avatar.url %>" /></div>
+    <div class="avatar_medium"><img src="<%= @user.avatar.url %>" /></div>
     <a href="/users/<%= @user.id %>/delete_avatar"><button>delete Avatar</button></a>
 </div>
 
