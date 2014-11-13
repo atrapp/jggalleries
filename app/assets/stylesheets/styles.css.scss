@@ -1,12 +1,12 @@
 
-body{
+body {
   padding: 0;
-  margin: 0;    
+  margin: 0;
 }
 
 img {
   width: 100%;
-  position: relative; 
+  position: relative;
 }
 
 h3 {
@@ -31,7 +31,7 @@ p {
   float: right;
 }
 
-.image-banner{ 
+.image-banner{
   height: 30em;
   overflow: hidden;
   margin: 0;
@@ -39,24 +39,24 @@ p {
 }
 
 #intro-block {
-  width: 100%; 
-  /*background: url("/assets/NWP7594.JPG") repeat-x;  */
-  background: image-url("NWP7594.JPG") no-repeat;  
+  width: 100%;
+/*  background: url("/assets/NWP7594.JPG") repeat-x;
+*/  background: image-url("NWP7594.JPG") no-repeat;
 
 }
 
 #intro-block p {
   width: 400px;
   height: 450px;
-  margin-top: 70px;  
-  padding: 50px;  
+  margin-top: 70px;
+  padding: 50px;
   background-color: rgba(0,0,0,0.1);
   color: white;
   font-size: 24px;
   font-style: italic;
 }
 
-.information { 
+.information {
   margin: 0;
   padding: 50px 10px 50px 50px;
   background-color: lightgray;
@@ -65,9 +65,22 @@ p {
 
 .information p {
   padding-top: 20px;
-  margin-right: 20px; 
-  font-family: 'Quicksand', sans-serif; 
+  margin-right: 20px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 16px;
+}
+
+#galleries {
+  width: 500px;
+  font-size: 20px;
+}
+
+#buy {
+  width: 100%;
+  font-size: 20px;
+  margin: 0;
+  padding: 50px 10px 50px 50px;
+  background-color: lightgray;
 }
 
 #video, #about {
@@ -76,7 +89,7 @@ p {
 
 #about {
   width: 500px;
-  font-size: 20px;  
+  font-size: 20px;
 }
 
 .jazz_image {
@@ -87,13 +100,28 @@ p {
 .portfolio_image {
   width: 200px;
   height: 200px;
-  border-radius: 100%; 
+  border-radius: 100%;
   padding: 20px;
 }
 
 figcaption {
   padding-top: 10px;
   text-align: center;
+}
+
+#blog {
+  width: 500px;
+  font-size: 20px;
+}
+
+#contact {
+  width: 500px;
+  font-size: 20px;
+}
+
+#studio {
+  width: 500px;
+  font-size: 20px;
 }
 
 .clear {
@@ -108,5 +136,5 @@ figcaption {
 
 #footer p {
   padding: 60px 20px 20px 50px;
-  font-family: 'Quicksand', sans-serif; 
+  font-family: 'Quicksand', sans-serif;
 }
