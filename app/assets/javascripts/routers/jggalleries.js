@@ -1,71 +1,89 @@
 Jggalleries.Router = Backbone.Router.extend({
- 
+
   routes : {
-    ''          : 'home',    
+    ''          : 'home',
+    'galleries' : 'galleries',
+    'buy'       : 'buy',
     'about'     : 'about',
-    'jazz'      : 'jazz',
-    'portfolio' : 'portfolio',
-    'events'    : 'events',
     'blog'      : 'blog',
-    'contact'   : 'contact'
+    'contact'   : 'contact',
+    'studio'    : 'studio',
   },
 
-  home: function(){  
+  home: function(){
       removeActiveClass();
-      $(".home-menu").addClass("active");     
+      $(".home-menu").addClass("active");
       $("html, body").animate({ scrollTop: 0 }, "slow");
   },
- 
-  about: function(){   
+
+  galleries: function(){
       removeActiveClass();
-      $(".about-menu").addClass("active");   
-      scrollToAnchor('about');  
+      $(".galleries-menu").addClass("active");
+      scrollToAnchor('galleries');
   },
 
-  jazz: function(){  
-      removeActiveClass();
-      $(".jazz-menu").addClass("active");   
-      scrollToAnchor('jazz');   
+  buy: function(){
+    removeActiveClass();
+    $(".buy-menu").addClass("active");
+    scrollToAnchor('buy');
   },
 
-  portfolio: function(){   
+  about: function(){
       removeActiveClass();
-      $(".portfolio-menu").addClass("active");   
-      scrollToAnchor('portfolio');   
+      $(".about-menu").addClass("active");
+      scrollToAnchor('about');
   },
 
-  events: function(){   
+  // jazz: function(){
+  //     removeActiveClass();
+  //     $(".jazz-menu").addClass("active");
+  //     scrollToAnchor('jazz');
+  // },
+
+  // portfolio: function(){
+  //     removeActiveClass();
+  //     $(".portfolio-menu").addClass("active");
+  //     scrollToAnchor('portfolio');
+  // },
+
+  // events: function(){
+  //     removeActiveClass();
+  //     $(".events-menu").addClass("active");
+  //     scrollToAnchor('events');
+  // },
+
+  blog: function(){
       removeActiveClass();
-      $(".events-menu").addClass("active");   
-      scrollToAnchor('events');    
+      $(".blog-menu").addClass("active");
+      scrollToAnchor('blog');
   },
 
-  blog: function(){   
+  contact: function(){
       removeActiveClass();
-      $(".blog-menu").addClass("active");   
-      scrollToAnchor('blog');    
+      $(".contact-menu").addClass("active");
+      scrollToAnchor('contact');
   },
 
-  contact: function(){  
-      removeActiveClass();
-      $(".contact-menu").addClass("active");   
-      scrollToAnchor('contact');   
-  }
+  studio: function(){
+    removeActiveClass();
+    $(".studio-menu").addClass("active");
+    scrollToAnchor('studio');
+  },
 
 })
- 
-function removeActiveClass(){ 
+
+function removeActiveClass(){
+  $(".galleries-menu").removeClass("active");
+  $(".buy-menu").removeClass("active");
   $(".about-menu").removeClass("active");
-  $(".jazz-menu").removeClass("active");
-  $(".portfolio-menu").removeClass("active");
-  $(".events-menu").removeClass("active");
   $(".blog-menu").removeClass("active");
   $(".contact-menu").removeClass("active");
+  $(".studio-menu").removeClass("active");
 }
 
-function scrollToAnchor(anchor){  
+function scrollToAnchor(anchor){
   var aTag = $("#"+ anchor +"-block");
-  $('html,body').animate({scrollTop: aTag.offset().top},'slow');   
+  $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 }
 
 
