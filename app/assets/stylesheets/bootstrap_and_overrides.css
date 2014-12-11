@@ -6,23 +6,25 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-.navbar {
-  font-family: 'Quicksand', sans-serif; 
-}
+/*.navbar {
+  font-family: 'Quicksand', sans-serif;*/
+  /*background-color: #351330;*/
+  /*margin-bottom: 50px;*/
+/*}*/
 
-/*.brand {  
-  font-family: 'Quicksand', sans-serif;  
+/*.brand {
+  font-family: 'Quicksand', sans-serif;
 }*/
 
-/*ul.nav.navbar-nav a { 
-  color: white;  
-  margin: 0 20px; 
+/*ul.nav.navbar-nav a {
+  color: white;
+  margin: 0 20px;
 }
 
 ul.nav.navbar-nav a:hover,
 ul.nav.navbar-nav li.active a {
   background: lightgray;
-  color: black; 
+  color: black;
 }
 
 .navbar-toggle {
