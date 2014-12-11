@@ -50,6 +50,8 @@ gem 'backbone-on-rails'
 
 gem "twitter-bootstrap-rails"
 
+gem "font-awesome-rails"
+
 gem "paperclip", "~> 4.1"
 gem "aws-sdk"
 
