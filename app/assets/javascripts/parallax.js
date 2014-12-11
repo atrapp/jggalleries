@@ -6,7 +6,7 @@ function updateBannerImagePosition() {
     var imageStart = imageBanner.position().top;
     // var newTop = scrollTop - imageStart; here the pictures stay static 
     var newTop = .9*(scrollTop - imageStart); // here the pictures have a little move up effect
-    $(ele).css('top', newTop)
+    $(ele).css('top', newTop);
   })
 }
 

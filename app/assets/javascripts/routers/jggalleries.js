@@ -52,7 +52,7 @@ Jggalleries.Router = Backbone.Router.extend({
 //     scrollToAnchor('studio');
 //   },
 
-// })
+})
 
 // function removeActiveClass(){
 //   $(".galleries-menu").removeClass("active");
