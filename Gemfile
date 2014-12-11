@@ -38,10 +38,10 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development, :test do  
+group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'pry'
-  gem 'pry-nav'  
+  gem 'pry-nav'
 end
 
 gem 'rails_12factor', group: :production
@@ -52,6 +52,15 @@ gem "twitter-bootstrap-rails"
 
 gem "paperclip", "~> 4.1"
 gem "aws-sdk"
+
+gem "tinymce-rails"
+
+gem "omniauth"
+
+gem "devise"
+
+gem "kaminari"
+
 
 
 
