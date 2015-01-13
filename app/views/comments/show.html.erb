@@ -1,1 +1,23 @@
-show.html.erb
+
+<p id="notice"><%= notice %></p>
+
+         <h1>Comment for "<%= @post.title %>"</h1>
+
+        <p>
+          <strong>User:</strong>
+          <%= @comment.user.email %>
+        </p>
+
+        <p>
+          <strong>Created at:</strong>
+          <%= @comment.created_at %>
+        </p>
+
+        <p>
+          <strong>Body:</strong>
+          <%= @comment.body %>
+        </p>
+
+        <%= link_to 'Edit', edit_post_comment_path %>
+        <%= link_to 'Delete', '' %>
+        <%= link_to 'Back', post_path(@post) %>
