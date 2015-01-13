@@ -1,1 +1,75 @@
-show.html.erb
+<%= tinymce_assets %>
+
+<h2><%=@post.title%></h2>
+
+  <p><%= @post.created_at.strftime("%B %d, %Y")%></p>
+
+  <p><%= if @post.comments.count>0%> |
+    <%= link_to pluralize(@post.comments.count, "comment"), blog_path(@post)+"#comments" %>
+
+    <%end%>
+  </p>
+
+  <p class="post-body"><%=@post.body.html_safe%></p>
+
+  <a name="comments">
+
+  <p class="back_button">
+    <%=link_to "Back", blog_index_path(url_slug: params[:url_slug], page: params[:index_page])%>
+  </p>
+
+  <%# if @post.comments.count > 10 %>
+  <!-- <div class="apple_pagination">
+    <%=# will_paginate @post.comments.paginate(:page => params[:page], :per_page => 10) %>
+  </div> -->
+
+  <% end %>
+
+  <h3>Comments</h3>
+
+  <%@post.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 10).each do |comment|%>
+
+  <div style="border-bottom:solid 1px #fff;padding-bottom:20px;margin-bottom:20px">
+
+      <strong>
+        <%-comment.user.nil? ? comment.display_name : (comment.user.username || "Anonymous" )%>:
+      </strong>
+
+      <p><%-comment.created_at.strftime("%B %d, %Y")%></p>
+      <div class="comment-body">
+        <%=simple_format(comment.body.html_safe)%>
+      </div>
+
+      <%if current_user %>
+        <%if comment.user==current_user or current_user.is_admin?%>
+        <%=link_to 'Delete', [@post,comment], method: :delete, data: {confirm: 'Second thoughts about deleting? Smart Choice. Think about it before you hit delete.' } %>
+        <% end %>
+      <%end %>
+  </div>
+
+<!--   FORM FOR NEW COMMENTS-->
+          <%if current_user %>
+            <%= form_for([@post, @comment]) do |f| %>
+          <% if @comment.error.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@comment.errors.count, "error") %> meant that this comment could not be saved. Hang in there! :</h2>
+
+              <ul>
+                <% @comment.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+          <div class="field">
+            <%= f.label "Share your thoughts with me, here:" %><br>
+            <%= f.text_area :body, :class +> "tinymce", :rows => 10, :cols => 100 %>
+            <%= tinymce %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+          <% end %>
+        <% end %>
