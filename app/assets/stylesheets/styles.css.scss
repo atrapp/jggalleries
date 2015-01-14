@@ -40,8 +40,12 @@ p {
 
 #intro-block {
   width: 100%;
-/*  background: url("/assets/NWP7594.JPG") repeat-x;
-*/  background: image-url("NWP7594.JPG") no-repeat;
+  background: image-url("landing.jpg") no-repeat center center fixed; 
+  /*background: url(images/landing.jpg) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 
