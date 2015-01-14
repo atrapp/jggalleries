@@ -24,9 +24,6 @@ Rails.application.routes.draw do
 
   # post '/send_mail' => 'contact#send_mail', :as => :send_mail
 
-
-  
-
   get '/users/:id/delete_avatar' => 'users#delete_avatar'
 
   devise_for :users
