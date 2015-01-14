@@ -9,21 +9,28 @@
   </div>
 
   <div class="field">
+    <div><%= f.label :username %><br />
+    <%= f.text_field :username, class: 'user-field' %></div>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: 'user-field' %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'user-field' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'user-button' %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+  <div calss="shared-links">
+  <%= render "devise/shared/links" %>
+  </div>
