@@ -55,5 +55,6 @@ class CommentsController < ApplicationController
 
     unless current_user==@comment.user or current_user.is_admin?
       redirect_to blog_path(@post)
+    end
   end
 end
