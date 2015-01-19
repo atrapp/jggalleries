@@ -103,7 +103,7 @@
         </ul>
       </div>
       <div class="clear"></div>
-    </div> 
+    </div>
 
 
 
@@ -128,7 +128,28 @@
     <div id="blog-block" class="information" name="blog">
       <h3>Blog</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi justo, eleifend feugiat orci at, bibendum vehicula sapien. Sed tincidunt imperdiet arcu, vel venenatis quam ornare a. Sed venenatis orci eu ligula aliquam, placerat blandit quam pharetra. Nunc non lacus nisi. Aliquam malesuada risus a ipsum posuere, ac sollicitudin lorem rhoncus. Vestibulum aliquam, odio ac tempor tincidunt, sem nulla pharetra nulla, sed hendrerit enim risus quis dui. Sed vel porta arcu. Proin a sollicitudin lectus. Suspendisse in euismod neque. Fusce adipiscing feugiat mauris a consequat. Aliquam erat volutpat.
+
+
+        <h1 class="blog_header">Jonathan's Blog</h1>
+
+        <% @posts.each do |post|%>
+
+          <div class="post-entry">
+            <h2><%=link_to post.title, post_path(post.id) %></h2>
+            <p><%=post.created_at.strftime("%B %d, %Y")%></p>
+
+            <div class="post-body">
+              <%if post==@posts.first%>
+                <%post.body.html_safe%>
+              <%end%>
+            </div>
+          </div>
+          <hr>
+        <%end%>
+
+        <%= link_to 'New Post', new_post_path %>
+
+
       </p>
     </div>
 

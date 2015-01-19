@@ -1,36 +1,24 @@
-
 <h1 class="blog_header">Jonathan's Blog</h1>
 
-<div class="apple_pagination">
-    <%= will_paginate @posts %>
-  </div>
-
+<h2>test test test</h2>
 <% @posts.each do |post|%>
+
   <div class="post-entry">
-    <h2><%=link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page])%></h2>
+
+    <h2><%=link_to post.title%></h2>
     <p><%=post.created_at.strftime("%B %d, %Y")%></p>
-    <!-- <p><%= if post.categories == [] then "Uncategorized" else "Category: " + post.categories.map{ |x| x[:name] }.join(', ') end%> -->
-    <%if post.comments.count>0%> |
-    <%=link_to pluralize(post.comments.count."comment"), blog_path(post,
-      url_slug: params[:url_slug], index_page: params[:page])+"#comments" %>
-    <%end%>
-  </p>
-  <div class="post-body">
-    <%if post==@posts.first%>
-      <%post.body.html_safe%>
-      <br>
-      <%=link_to "show", blog_path(post, url_slug: params[:url_slug],
-        index_page: params[:page])%>
-      <%else%>
-      <%=truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, seperator: " ")%>
-      <br>
-      <%=link_to "see more", blog_path(post, url_slug: params[:url_slug],
-        index_page: params[:page])%>
+
+
+    <div class="post-body">
+      <%if post==@posts.first%>
+        <%post.body.html_safe%>
+        <br>
+
+        <br>
+
       <%end%>
     </div>
-  </div>
-  <%end%>
 
-  <div class="apple_pagination">
-    <%= will_paginate @posts %>
   </div>
+
+<%end%>

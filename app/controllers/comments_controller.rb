@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new(:post=>@post)
   end
 
-
   def create
     post = Post.find(params[:post_id])
     new_comment = Comment.create(comment_params)
@@ -21,14 +20,10 @@ class CommentsController < ApplicationController
     redirect_to blog_path(post)
   end
 
-
-
   def edit
     @post = Post.find(params[:id])
     @comment = Comment.find(params[:id])
   end
-
-
 
   def show
    @post = Post.find(params[:post_id])
@@ -39,9 +34,6 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to blog_path(@post)
   end
-
-
-
 
   private
 
@@ -57,4 +49,5 @@ class CommentsController < ApplicationController
       redirect_to blog_path(@post)
     end
   end
+
 end
