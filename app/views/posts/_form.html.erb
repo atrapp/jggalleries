@@ -1,1 +1,45 @@
-_form.html.erb
+<%= tinymce_assets %>
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="post-entry">
+
+    <div class="field">
+      <%= f.label :title, class: 'post-label' %><br>
+      <%= f.text_field :title, class: 'post-title-field' %>
+    </div>
+    <div class="field">
+      <%= f.label :body, class: 'post-label' %><br>
+      <%= f.text_area :body, :class => "tinymce", :rows => 10, :cols => 100 %>
+      <%= tinymce %>
+    </div>
+
+    <div class="field">
+      <p class="post-label">Categories</p><br>
+      <%= f.collection_check_boxes(:category_ids, Category.order("name ASC"), :id, :name) do |box|%>
+        <%=box.label do%>
+        <div class="post-checkbox-field">
+           <%=box.check_box + " " + box.text%>
+        </div>
+        <%end%>
+      <%end%>
+    </div>
+
+    <div class="post-actions">
+      <%= f.submit %>
+    </div>
+
+  </div>
+
+<% end %>

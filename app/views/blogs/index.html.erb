@@ -1,8 +1,8 @@
 
 <h1 class="blog_header">Jonathan's Blog</h1>
 
-<div class="apple_pagination">
-    <%= will_paginate @posts %>
+<div class="kaminari_pagination">
+    <%= paginate @posts %>
   </div>
 
 <% @posts.each do |post|%>
@@ -31,6 +31,6 @@
   </div>
   <%end%>
 
-  <div class="apple_pagination">
-    <%= will_paginate @posts %>
+  <div class="kaminari_pagination">
+    <%= paginate @posts %>
   </div>

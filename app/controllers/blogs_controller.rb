@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   def index
-   @posts=Post.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+   @posts=Post.order("created_at DESC").page(params[:page].per(2).includes(:comments)
   end
 
   def show
