@@ -25,21 +25,11 @@
       <%= tinymce %>
     </div>
 
-    <div class="field">
-      <p class="post-label">Categories</p><br>
-      <%= f.collection_check_boxes(:category_ids, Category.order("name ASC"), :id, :name) do |box|%>
-        <%=box.label do%>
-        <div class="post-checkbox-field">
-           <%=box.check_box + " " + box.text%>
-        </div>
-        <%end%>
-      <%end%>
-    </div>
-
     <div class="post-actions">
       <%= f.submit %>
     </div>
 
   </div>
 
-<% end %>
+
+

@@ -1,7 +1,7 @@
 <div class="post-entry">
           <h2><%=@post.title%></h2>
           <p><%= @post.created_at.strftime("%B %d, %Y")%></p>
-          <!-- <p><%= if @post.categories == [] then "Uncategorized" else "Category: " + @post.categories.map{ |x| x[:name] }.join(', ') end%> -->
+
             <%if @post.comments.count>0%> |
               <%=link_to pluralize(@post.comments.count,"comment"), blog_path(@post)+"#comments" %>
             <%end%>

@@ -1,7 +1,7 @@
-require "kaminari"
 
 class Post < ActiveRecord::Base
   belongs_to :user
+  belongs_to :blog
   has_many :comments
 
 # def self

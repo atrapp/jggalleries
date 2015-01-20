@@ -1,27 +1,12 @@
 class WelcomeController < ApplicationController
+
+
+  def home
+
+  end
+
   def index
-
+    @posts=Post.order("created_at DESC") #.page params[:page]
   end
-
-  def galleries
-
-  end
-
-  def buy
-
-  end
-
-  def about
-
-  end
-
-  def contact
-
-  end
-
-  def studio
-
-  end
-
 
 end
