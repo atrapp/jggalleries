@@ -1,75 +1,61 @@
-
-
-
 .title {
-padding-top: 3em;
-
+  padding-top: 3em;
 }
 
-
-
 .quote {
-
   padding-bottom: 2em;
   font-size: 18px;
   font-family: Arial;
-
 }
 
 .quote_source {
-
   padding-bottom: 2em;
   font-size: 12px;
   font-family: Arial;
-  /*font-style: italic;*/
-
 }
 
 .welcome_img {
-
   margin-top: 9em;
   margin-bottom: 7em;
   border: 2px solid black;
-  /*float: right;*/
-  /*width: 90%;*/
-  /*border-bottom: 10px;*/
-  /*background-color: green;*/
 }
-
-
 
 .welcome_img img {
-
   width: 100%;
-  /*border: 2px solid black;*/
-
 }
-
 
 #intro-block {
-  background-color: red
+
 }
+
 #galleries-block {
   background-color: oldlace;
 }
+
 #jazz-block {
   background-color: green;
 }
-#buy-block {
+
+/*#buy-block {
   background-color: yellow;
-}
+}*/
+
 #about-block {
   background-color: orange;
 }
+
 #events-block {
   background-color: brown;
 }
+
 #blog-block {
   background-color: violet;
 }
+
 #contact-block {
   background-color: oldlace;
 }
+
 #studio-block {
   background-color: pink;
 }
