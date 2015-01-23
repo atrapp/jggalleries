@@ -63,9 +63,3 @@ gem "omniauth"
 gem "devise"
 
 gem "kaminari"
-
-gem 'will_paginate', '~> 3.0'
-
-
-
-
