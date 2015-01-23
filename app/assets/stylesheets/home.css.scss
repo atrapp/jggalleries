@@ -3,28 +3,36 @@
 }
 
 .quote {
+  padding-top: 2em;
   padding-bottom: 2em;
-  font-size: 18px;
-  font-family: Arial;
 }
 
 .quote_source {
-  padding-bottom: 2em;
   font-size: 12px;
-  font-family: Arial;
 }
 
-.welcome_img {
-  margin-top: 9em;
-  margin-bottom: 7em;
-  border: 2px solid black;
+.information {
+  margin: 0;
+  padding: 50px;
 }
 
-.welcome_img img {
-  width: 100%;
+#video, #facts {
+  padding: 50px 0;
 }
 
-#intro-block {
+.portfolio_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  padding: 20px;
+}
+
+figcaption {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#home-block {
 
 }
 
@@ -32,21 +40,21 @@
   background-color: oldlace;
 }
 
-#jazz-block {
-  background-color: green;
-}
+/*#jazz-block {
+
+}*/
 
 /*#buy-block {
-  background-color: yellow;
+
 }*/
 
 #about-block {
   background-color: orange;
 }
 
-#events-block {
-  background-color: brown;
-}
+/*#events-block {
+
+}*/
 
 #blog-block {
   background-color: violet;
