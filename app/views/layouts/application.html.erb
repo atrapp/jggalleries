@@ -1,113 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Jonathan Glass Galleries</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 <!-- user-scalable=no -->">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
-
-     <!-- fonts -->
-<!--     <link href='http://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'> -->
 </head>
+
 <body>
 
-<div id="wrapper">
+  <div id="wrapper">
 
- <!--    <div class="navbar navbar-inverse navbar-fixed-top navbar-responsive" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="">Jonathan Glass Galleries</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="about-menu"><a href="#about">the Artist</a></li>
-            <li class="jazz-menu"><a href="#jazz">about Jazz</a></li>
-            <li class="portfolio-menu"><a href="#portfolio">Portfolio</a></li>
-            <li class="events-menu"><a href="#events">Events</a></li>
-            <li class="blog-menu"><a href="#blog">Blog</a></li>
-            <li class="contact-menu"><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
- -->
-
-
-
-<!-- ************************************ -->
-<!-- this is the nav bar -->
-
+    <!-- this is the nav bar -->
     <%= nav_bar :fixed => :top, :inverse => true, :responsive => true, :brand => "Jonathan Glass Studios" do %>
-        <ul class="nav navbar-nav">
-            <li class="galleries-menu"><a href="#galleries">Galleries</a></li>
-            <!-- <li class="buy-menu"><a href="#buy">Buy</a></li> -->
-            <li class="about-menu"><a href="#about">About</a></li>
-            <li class="blog-menu"><a href="#blog">Blog</a></li>
-            <li class="contact-menu"><a href="#contact">Contact</a></li>
-            <li class="studio-menu"><a href="#studio">Studio</a></li>
-        </ul>
-        <%= menu_group :pull => :right do %>
 
+      <ul class="nav navbar-nav">
+          <li class="galleries-menu"><a href="#galleries">Galleries</a></li>
+          <!-- <li class="buy-menu"><a href="#buy">Buy</a></li> -->
+          <li class="about-menu"><a href="#about">About</a></li>
+          <li class="blog-menu"><a href="#blog">Blog</a></li>
+          <li class="contact-menu"><a href="#contact">Contact</a></li>
+          <li class="studio-menu"><a href="#studio">Studio</a></li>
+      </ul>
 
-          <%if user_signed_in?%>
-              <span class="user-menu pull-right"><%=link_to "Edit Profile", edit_user_registration_path %></span>
-                <span class="user-menu pull-right"><%=link_to "Sign out", destroy_user_session_path, method: :delete %></span>
-            <%else%>
-              <span class="user-menu pull-right"><%=link_to "Sign Up", new_user_registration_path %></span><br /><br />
-              <span class="user-menu pull-right"><%=link_to "onLogin", new_user_session_path %></span>
-          <%end%>
-
-
+      <%= menu_group :pull => :right do %>
+        <% if user_signed_in? %>
+          <span class="user-menu pull-right"><%=link_to "Edit Profile", edit_user_registration_path %></span>
+            <span class="user-menu pull-right"><%=link_to "Sign out", destroy_user_session_path, method: :delete %></span>
+        <% else %>
+          <span class="user-menu pull-right"><%= link_to "Sign Up", new_user_registration_path %></span><br><br>
+          <span class="user-menu pull-right"><%= link_to "Login", new_user_session_path %></span>
         <% end %>
+      <% end %>
     <% end %>
-
-
-
-<!-- end nav bar -->
-
-<!-- DEVISE FLASH NOTICES required acc to rails g devise install instructions???-->
-<!-- <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
-
-
-<!-- ************************************ -->
-
-
-
-<!--     <%= nav_bar :fixed => :top, :inverse => true, :responsive => true, :brand => "Jonathan Glass Studios" do %>
-        <%= menu_group do %>
-            <li class="about-menu"><a href="#about">the Artist</a></li>
-            <li class="jazz-menu"><a href="#jazz">about Jazz</a></li>
-            <%= menu_divider %>
-            <li class="portfolio-menu"><a href="#portfolio">Portfolio</a></li>
-            <%= drop_down "" do %>
-                <%= menu_item "Jazz Gallery", root_path %>
-                <%= menu_item "Women and Jazz", root_path %>
-                <%= menu_item "Luminaries", root_path %>
-                <%= menu_item "Circle of Musical trust", root_path %>
-            <% end %>
-            <%= menu_divider %>
-            <li class="events-menu"><a href="#events">Events</a></li>
-            <li class="blog-menu"><a href="#blog">Blog</a></li>
-            <li class="contact-menu"><a href="#contact">Contact</a></li>
-        <% end %>
-        <%= menu_group :pull => :right do %>
-            <%= menu_item "Login", root_path %>
-        <% end %>
-    <% end %> -->
-
-
-
-
+    <!-- end nav bar -->
 
     <%= yield %>
 
@@ -115,7 +43,7 @@
       <p>Copyright &copy; 2015, Jonathan Glass</p>
     </div>
 
-</div>
+  </div>
 
 </body>
 </html>
