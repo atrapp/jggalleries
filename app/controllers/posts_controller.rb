@@ -28,7 +28,6 @@ class PostsController < ApplicationController
   end
 
 
-
   def destroy
     @post.destroy
     respond_with(@post)
