@@ -18,41 +18,35 @@
 </div>
 
 <div id="galleries-block" class="information" name="galleries">
-  <h3>Galleries</h3>
-  <div class="left">
-    <a href="">
-      <figure>
-        <img class="portfolio_image" src="<%= asset_path("jazzgallery.jpg") %>" />
-        <figcaption>Big Bands</figcaption>
-      </figure>
-    </a>
-  </div>
-  <div class="left">
-    <a href="">
-      <figure>
-        <img class="portfolio_image" src="<%= asset_path("womenjazz.jpg") %>" />
-        <figcaption>Women and Jazz</figcaption>
-      </figure>
-    </a>
-  </div>
-  <div class="left">
-    <a href="">
-      <figure>
-        <img class="portfolio_image" src="<%= asset_path("luminaries.png") %>" />
-        <figcaption>Luminaries</figcaption>
-      </figure>
-    </a>
-  </div>
-  <div class="left">
-    <a href="">
-      <figure>
-        <img class="portfolio_image" src="<%= asset_path("circleoftrust.jpg") %>" />
-        <figcaption>Circle of Musical Trust</figcaption>
-      </figure>
-    </a>
+  <div class="row-fluid">
+
+    <div class="span6">
+       <img src="<%= asset_path("jazzgalleryB.jpg") %>" >
+    </div>
+
+    <div class="span6">
+
+      <div class="row-fluid">
+        <div class="span6">
+          <img src="<%= asset_path("jazzgallery.jpg") %>" >
+        </div>
+        <div class="span6">
+          <img src="<%= asset_path("womenjazz.jpg") %>" >
+        </div>
+      </div>
+<p></p>
+      <div class="row-fluid">
+        <div class="span6">
+          <img src="<%= asset_path("luminaries.jpg") %>" >
+        </div>
+        <div class="span6">
+          <img src="<%= asset_path("circleoftrust.jpg") %>" >
+        </div>
+      </div>
+
+    </div>
   </div>
   <div class="clear"></div>
-
 </div>
 
 <div id="about-block" class="information" name="about">

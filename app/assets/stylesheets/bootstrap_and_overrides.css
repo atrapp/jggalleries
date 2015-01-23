@@ -6,6 +6,22 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+.container-fluid {
+    padding: 0;
+}
+
+.row-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+/*@media (max-width: 797px) {
+    body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}*/
+
 /*.navbar {
   font-family: 'Quicksand', sans-serif;*/
   /*background-color: #351330;*/
