@@ -17,11 +17,11 @@ class CommentsController < ApplicationController
     new_comment = Comment.create(comment_params)
     post.comments << new_comment
     current_user.comments << new_comment
-    redirect_to blog_path(post)
+    redirect_to blogs_path(post)
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
   end
 
@@ -46,7 +46,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     unless current_user==@comment.user or current_user.is_admin?
-      redirect_to blog_path(@post)
+      redirect_to blogs_path(@post)
     end
   end
 

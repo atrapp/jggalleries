@@ -41,6 +41,7 @@
 .post-label {
   font-size: 1.5em;
   padding-top: 30px;
+
 }
 
 .post-title-field {
@@ -54,9 +55,19 @@
 }
 
 .post-body {
- /* padding-bottom: 30px;
-  border-bottom:solid 30px #CCC;*/
+  width: 100%;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  border-bottom:solid 30px black;
+  background-color: yellow;
+  font-size: 1.2em
+
 }
+
+/*.post-body-field {
+  font-family: Helvetica;
+  font-size: 1em;
+}*/
 
 .post-actions {
   margin: 30px 0;
