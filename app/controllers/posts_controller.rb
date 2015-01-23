@@ -5,11 +5,14 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
+
     @posts = Post.all.order("created_at DESC") #.paginate(:page => params[:page], :per_page => 10)
+
     respond_with(@posts)
   end
 
   def show
+
     respond_with(@post)
   end
 
@@ -23,6 +26,7 @@ class PostsController < ApplicationController
     @post.save
     respond_with(@post)
   end
+
 
   def edit
   end

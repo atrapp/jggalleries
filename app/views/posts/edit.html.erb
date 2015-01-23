@@ -1,1 +1,10 @@
-edit.html.erb
+<h1 class="post-header">Editing post</h1>
+
+            <%= render 'form' %>
+
+            <p class="post-button">
+                <%= link_to 'Show', @post %>
+            </p>
+            <p class="post-button">
+                <%= link_to 'Back', posts_path %>
+            <p/>
