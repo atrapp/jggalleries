@@ -1,13 +1,5 @@
 body {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-/*  font-family: Garamond;
-*/
-  /*font-family: EB Garamond;*/
   padding: 0;
-  /*background-color: red;*/
   margin: 0;
 }
 
@@ -20,17 +12,11 @@ header {
   margin-top: 50px;
 }
 
-/*.nav {
-  margin-bottom: 50px;
-
-}*/
-
 .clear {
   clear: both;
 }
 
 .span4 {
-  /*margin-left: 50px;*/
   padding: 20px;
   text-align: justify;
 }
@@ -60,7 +46,6 @@ header {
 
 /* added later */
 .span1, .span2, .span3, .span5, .span7, .span9, .span11 {
-
   margin-top: 50px;
   margin-left: 50px;
   padding: 20px;
@@ -81,19 +66,13 @@ p {
   padding: 0;
 }
 
-
 #footer {
   clear: both;
-  /*background-color: rgba(53, 19, 48, 0.9);*/
   background-color: #351330;
   color: green;
-  /*color: rgba(232,202,164, 0);*/
   height: 50px;
   text-align: center;
-/*  padding-top: 20px;
-*/}
-
-
+}
 
 @media only screen and (max-width : 979px) {
 
