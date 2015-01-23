@@ -1,10 +1,11 @@
 <h1 class="blog_header">Jonathan's Blog</h1>
 
+
 <% @posts.each do |post|%>
 
   <div class="post-entry">
 
-    <h2><%=link_to post.title%></h2>
+    <h2><%=link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page])%></h2>
     <p><%=post.created_at.strftime("%B %d, %Y")%></p>
 
 
@@ -13,7 +14,9 @@
         <%post.body.html_safe%>
         <br>
 
+
         <br>
+
 
       <%end%>
     </div>

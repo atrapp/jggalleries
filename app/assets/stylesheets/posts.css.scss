@@ -1,3 +1,63 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-list {
+  font-size: 1.2em;
+  margin: 30px auto;
+}
+
+.post-list thead, tbody {
+  border-bottom: 1px solid white ;
+}
+
+.post-list th, td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.post-button {
+  text-align: center;
+  font-size: 1.2em;
+  background: black;
+  padding: 20px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 100%;
+}
+
+.post-header {
+  color: white;
+  background: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.post-label {
+  font-size: 1.5em;
+  padding-top: 30px;
+}
+
+.post-title-field {
+  width: 70%;
+}
+
+.post-checkbox-field {
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.post-body {
+ /* padding-bottom: 30px;
+  border-bottom:solid 30px #CCC;*/
+}
+
+.post-actions {
+  margin: 30px 0;
+}

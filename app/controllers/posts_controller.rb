@@ -49,7 +49,7 @@ class PostsController < ApplicationController
 
   def verify_if_admin
     unless current_user && current_user.is_admin?
-      redirect_to blog_index_path
+      redirect_to blogs_path
     end
   end
 
