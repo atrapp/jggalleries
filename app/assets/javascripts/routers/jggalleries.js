@@ -1,7 +1,8 @@
 Jggalleries.Router = Backbone.Router.extend({
 
   routes : {
-    ''          : 'home',
+    // ''          : 'home',
+    'home'      : 'home',
     'galleries' : 'galleries',
     // 'buy'       : 'buy',
     'about'     : 'about',
@@ -10,9 +11,16 @@ Jggalleries.Router = Backbone.Router.extend({
     'studio'    : 'studio',
   },
 
+  // home: function(){
+  //     removeActiveClass();
+  //     $(".home-menu").addClass("active");
+  //     $("html, body").animate({ scrollTop: 0 }, "slow");
+  // },
+
   home: function(){
       removeActiveClass();
       $(".home-menu").addClass("active");
+      // scrollToAnchor('home');
       $("html, body").animate({ scrollTop: 0 }, "slow");
   },
 
@@ -55,6 +63,7 @@ Jggalleries.Router = Backbone.Router.extend({
 })
 
 function removeActiveClass(){
+  $(".home-menu").removeClass("active");
   $(".galleries-menu").removeClass("active");
   // $(".buy-menu").removeClass("active");
   $(".about-menu").removeClass("active");
