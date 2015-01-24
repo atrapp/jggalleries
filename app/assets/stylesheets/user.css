@@ -1,10 +1,10 @@
-.avatar_thumb { 
+.avatar_thumb {
   width: 100px;
   margin: 10px;
-  border: 1px solid black; 
+  border: 1px solid black;
 }
 
-.avatar_medium { 
+.avatar_medium {
   width: 300px;
   margin: 10px;
   border: 1px solid black;
@@ -17,11 +17,6 @@ ul {
 ul li {
   /*border: 1px solid black;*/
   /*margin: 20px 0;*/
-}
-
-p {
-  margin: 10px;
-  font-size: 20px;
 }
 
 button {
