@@ -1,5 +1,36 @@
-.title {
+/*.title {
   padding-top: 3em;
+}*/
+
+.header-img {
+
+}
+
+.header-img img{
+  opacity: .6;
+}
+
+.login-area {
+  height: 30px;
+  /*background-color: blue;*/
+}
+
+.message-area {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #a19b96;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top: 1px solid lightgrey;
+  /*background-color: yellow;*/
+}
+
+/*.user-menu {
+  padding: 10px;
+  font-size: 16px;
+}*/
+
+#quotes {
+  padding-top: 70px;
 }
 
 .quote {
@@ -11,45 +42,61 @@
   font-size: 12px;
 }
 
+#about-artist {
+  background-color: #a9b0b4;
+  /*color: white;*/
+  /*#a19b96;*/
+}
+
+.gallery-img {
+  position: relative;
+}
+
+.gallery-img h3 {
+   color: white;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   text-align: left;
+   padding-left: 5px;
+}
+.contact-field {
+  width: 400px;
+}
+
+#video {
+  /*padding: 50px 0;*/
+}
+
 .information {
-  margin: 0;
+  margin: 0 auto;
   padding: 50px;
+  /*background-color:red;*/
 }
 
-#video, #facts {
-  padding: 50px 0;
-}
-
-.portfolio_image {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  padding: 20px;
-}
-
-figcaption {
-  padding-top: 10px;
-  text-align: center;
+#intro-block {
+  background-color: orange;
 }
 
 #home-block {
+  padding-top: 200px;
+}
 
+#about-block {
+  background-color: #dedede;
 }
 
 #galleries-block {
-  /*background-color: oldlace;*/
+  /*padding-top: 200px;*/
 }
 
 /*#jazz-block {
 
 }*/
 
-/*#buy-block {
-
-}*/
-
-#about-block {
-  /*background-color: orange;*/
+#buy-block {
+  background-color: #d1c098;
 }
 
 /*#events-block {
@@ -57,13 +104,13 @@ figcaption {
 }*/
 
 #blog-block {
-  background-color: violet;
+  /*background-color: violet;*/
 }
 
 #contact-block {
-  background-color: oldlace;
+  background-color: #a9b0b4;
 }
 
 #studio-block {
-  background-color: pink;
+  background-color: #a19b96;
 }

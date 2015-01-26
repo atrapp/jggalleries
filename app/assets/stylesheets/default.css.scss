@@ -3,9 +3,12 @@ body {
   padding: 0;
 }
 
+header {
+
+}
+
 .wrapper {
-  /*margin: 0 auto;*/
-  margin: 50px;
+  margin: 0 50px;
 }
 
 .clear {
@@ -18,19 +21,11 @@ h4 {
 }
 
 #footer {
-  height: 200px;
+  height: 100px;
   padding-top: 100px;
   text-align: center;
 }
 
-/*.no-margin {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-*/
 .span4 {
   padding: 20px;
   text-align: justify;
@@ -41,8 +36,6 @@ h4 {
   /*margin-left: 30px;*/
   /*padding: 5px;*/
   text-align: justify;
-  /*border: 1px solid red;*/
-  /*background-color: green;*/
 }
 
 .span8 {
