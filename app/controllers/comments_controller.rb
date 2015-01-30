@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create, :update, :delete]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :delete]
   before_action :verify_authorship, only: [:destroy]
 
   def index
@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
     new_comment = Comment.create(comment_params)
     post.comments << new_comment
     current_user.comments << new_comment
-    redirect_to blogs_path(post)
+    redirect_to posts_path #(post)
   end
 
   def edit

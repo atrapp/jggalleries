@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
 
-  # resources :blogs
-  # -- CHECK/uncomment to see if views path works
+
 
   resources :posts do
     resources :comments, except: :update
@@ -10,12 +9,13 @@ Rails.application.routes.draw do
 
   #resources :blogs, only:[:index,:show]
 
-  resources :blogs, only:[:index,:show] do
-    collection do
-      get 'blogs/:url_slug' => 'blogs#index',
-      as: :blogs
-    end
-  end
+  # resources :blogs, only:[:index,:show] do
+  #   collection do
+  #     get 'blogs/:url_slug' => 'blogs#index',
+  #     as: :blogs
+  #   end
+  # end
+
   root 'welcome#index', :as => :root
 
 

@@ -8,17 +8,25 @@
     <h2><%=link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page])%></h2>
     <p><%=post.created_at.strftime("%B %d, %Y")%></p>
 
+    <p><%= if post.comments.count>0%> |
+      <%= link_to pluralize(post.comments.count, "comment"), blogs_path(post, url_slug: params[:url_slug], index_page: params[:page])+"#comments" %>
+      <%end%>
+      </p>
+
 
     <div class="post-body">
       <%if post==@posts.first%>
         <%post.body.html_safe%>
         <br>
-
-
-        <br>
-
-
+      <%=link_to "show", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page])%>
+      <%else%>
+      <%=truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "")%>
+      <br>
+      <%=link_to "see more", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page])%>
       <%end%>
+
+
+
     </div>
 
 

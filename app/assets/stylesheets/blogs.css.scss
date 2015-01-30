@@ -5,7 +5,8 @@
 
 
 .blog_header {
-  color: white;
+  margin-top: 80px;
+  color: red;
   background: black;
   padding: 20px;
   text-align: center;
@@ -38,7 +39,7 @@
 
 /***************************************************************************/
 /* Pagination Styling taken from http://mislav.uniqpath.com/will_paginate/ */
-  .kaminari_pagination {
+ /* .kaminari_pagination {
     background: #f1f1f1;
     border: 1px solid #e5e5e5;
     text-align: center;
@@ -75,7 +76,7 @@
 
   .kaminari_pagination a:hover, .kaminari_pagination a:focus {
       text-decoration: underline;
-  }
+  }*/
 
 /*                          End of Pagination Styling                       */
 /****************************************************************************/
