@@ -25,32 +25,19 @@
 
           <div class="login-area">
             <%= menu_group :pull => "right" do %>
-              <% if user_signed_in? %>
-                <span class="user-menu pull-right">
-                  <%=link_to "Edit Profile", edit_user_registration_path %>
-                </span>
-                  <span class="user-menu pull-right">
-                    <%=link_to "Sign out", destroy_user_session_path, method: :delete %>
-                  </span>
-              <% else %>
-                <span class="user-menu pull-right">
-                  <%= link_to "Sign Up", new_user_registration_path %></span>
-                <span class="user-menu pull-right">
-                  <%= link_to "Login", new_user_session_path %>
-                </span>
-              <% end %>
+              <%= render "devise/shared/registration_items" %>
             <% end %>
           </div>
         </div>
 
         <ul class="nav navbar-nav">
-          <li class="home-menu"><a href="#home">Home</a></li>
-          <li class="about-menu"><a href="#about">About</a></li>
-          <li class="galleries-menu"><a href="#galleries">Galleries</a></li>
-          <li class="buy-menu"><a href="#buy">Buy</a></li>
-          <li class="blog-menu"><a href="#blog">Blog</a></li>
-          <li class="contact-menu"><a href="#contact">Contact</a></li>
-          <li class="studio-menu"><a href="#studio">Studio</a></li>
+          <li class="home-menu"><a href="/#home">Home</a></li>
+          <li class="about-menu"><a href="/#about">About</a></li>
+          <li class="galleries-menu"><a href="/#galleries">Galleries</a></li>
+          <li class="buy-menu"><a href="/#buy">Buy</a></li>
+          <li class="blog-menu"><a href="/#blog">Blog</a></li>
+          <li class="contact-menu"><a href="/#contact">Contact</a></li>
+          <li class="studio-menu"><a href="/#studio">Studio</a></li>
         </ul>
 
         <div class="clear"></div>
@@ -77,8 +64,4 @@
     <div id="footer">
       <p>Copyright &copy; 2015, Jonathan Glass</p>
     </div>
-
   </div>
-
-</body>
-</html>
