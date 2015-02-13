@@ -1,37 +1,33 @@
 <% if user_signed_in? %>
   <span class="user-menu pull-right">
+    <%=link_to "Sign out", destroy_user_session_path, method: :delete %>
+  </span>
+  <!-- Click this first 'Edit Profile' to get in to the path => not necessary anymore because ... -->
+  <span class="user-menu pull-right">
     <%=link_to "Edit Profile", edit_user_registration_path %>
   </span>
-    <span class="user-menu pull-right">
-      <%=link_to "Sign out", destroy_user_session_path, method: :delete %>
-    </span>
+
+  <!-- ... the modal is being loaded on Document Ready in jggalleries.js -->
+  <span class="user-menu pull-right">
+    <%= link_to "Show Edit Profile", "#editProfileModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small', id: "edit_profile_modal", :style => "visibility:hidden" %>
+  </span>
 
 <% else %>
   <span class="user-menu pull-right">
     <%= link_to "Sign Up", new_user_registration_path %>
   </span>
-
-<!-- Click this first 'Login' to get in to the path -->
+  <!-- Click this first 'Login' to get in to the path => not necessary anymore because ... -->
   <span class="user-menu pull-right">
-    <%= link_to "Login", new_user_session_path, 'data-toggle' => "modal", 'data-target' => "#loginModal", :method => 'get' %>
+    <%= link_to "Login", new_user_session_path %>
   </span>
 
-
-<!-- Then click one of the following buttons to display the popup window for login / twitter bootstrap modal -->
- <span class="user-menu pull-right">
-    <%= link_to "Show Modal", "#loginModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small' %>
-  </span>
+  <!-- ... the modals are being loaded on Document Ready in jggalleries.js -->
   <span class="user-menu pull-right">
-    <%= link_to "Show 2", new_user_session_path, :remote => true, "data-toggle" => "modal", 'data-target' => "#loginModal", :method => 'get', :class => 'btn btn-small' %>
+    <%= link_to "Show Login", "#loginModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small', id: "login_modal", :style => "visibility:hidden" %>
   </span>
+
   <span class="user-menu pull-right">
-      <%= link_to 'Register', new_user_session_path, 'data-toggle' => "modal", 'data-target' => "#myModal", :method => 'get' %>
+    <%= link_to "Show Sign up", "#signupModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small', id: "signup_modal", :style => "visibility:hidden" %>
   </span>
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Login
-</button>
 
 <% end %>

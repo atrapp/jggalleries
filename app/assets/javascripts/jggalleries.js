@@ -11,6 +11,13 @@ window.Jggalleries = {
 
 
 $(function(){
+
+  // this preloads all the login/sign up/edit profile modals, they are getting fired
+  // when the user clicks into the path
+  $("#login_modal").click();
+  $("#signup_modal").click();
+  $("#edit_profile_modal").click();
+
   Jggalleries.initialize();
 
   $(window).scroll(function(){
