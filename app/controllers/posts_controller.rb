@@ -30,8 +30,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.save
+    @post.update(post_params)
     respond_with(@post)
   end
 

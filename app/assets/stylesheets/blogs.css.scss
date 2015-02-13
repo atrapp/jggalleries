@@ -5,28 +5,33 @@
 
 
 .blog_header {
-  color: white;
+  margin-top: 80px;
+  color: red;
   background: black;
   padding: 20px;
   text-align: center;
 }
 
 .post-entry{
-  border-bottom:solid 30px #CCC;
-  padding: 30px;
+  /*border-bottom:solid 30px #CCC;
+  padding: 30px;*/
 
   h2{
     a{
-      color:#000;
+      color: #fffff;
       text-decoration:none;
     }
   }
+
 }
 
-.post-body {
-  font-size: 1.2em;
-  /*font-style: italic;*/
-}
+/*.post-body {
+  background-color: yellow;
+  color: red;
+
+}*/
+
+
 
 .back_button {
   margin-bottom: 80px;
@@ -34,7 +39,7 @@
 
 /***************************************************************************/
 /* Pagination Styling taken from http://mislav.uniqpath.com/will_paginate/ */
-  .apple_pagination {
+ /* .kaminari_pagination {
     background: #f1f1f1;
     border: 1px solid #e5e5e5;
     text-align: center;
@@ -42,15 +47,15 @@
     cursor: default;
   }
 
-  .apple_pagination a, .apple_pagination span {
+  .kaminari_pagination a, .kaminari_pagination span {
     padding: 0.2em 0.3em;
   }
 
-  .apple_pagination .disabled {
+  .kaminari_pagination .disabled {
     color: #aaaaaa;
   }
 
-  .apple_pagination .current {
+  .kaminari_pagination .current {
     font-style: normal;
     font-weight: bold;
     background-color: #bebebe;
@@ -64,14 +69,14 @@
     text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
   }
 
-  .apple_pagination a {
+  .kaminari_pagination a {
     text-decoration: none;
     color: black;
   }
 
-  .apple_pagination a:hover, .apple_pagination a:focus {
+  .kaminari_pagination a:hover, .kaminari_pagination a:focus {
       text-decoration: underline;
-  }
+  }*/
 
 /*                          End of Pagination Styling                       */
 /****************************************************************************/

@@ -32,7 +32,8 @@
 }
 
 .post-header {
-  color: white;
+  color: red;
+  margin-top: 80px;
   background: black;
   padding: 20px;
   text-align: center;
@@ -41,6 +42,7 @@
 .post-label {
   font-size: 1.5em;
   padding-top: 30px;
+
 }
 
 .post-title-field {
@@ -54,9 +56,30 @@
 }
 
 .post-body {
- /* padding-bottom: 30px;
-  border-bottom:solid 30px #CCC;*/
+  /*width: 70%;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  border-bottom:solid 30px black;
+  background-color: yellow;
+  font-size: 1.2em*/
+
 }
+
+p {
+  margin-bottom: 90px;
+  color: green;
+}
+
+/*.post-body-field {
+  font-family: Helvetica;
+  font-size: 1em;
+}*/
+
+.post-entry {
+margin-top: 80px;
+
+}
+
 
 .post-actions {
   margin: 30px 0;
