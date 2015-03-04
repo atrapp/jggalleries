@@ -72,7 +72,13 @@ function removeActiveClass(){
   $(".studio-menu").removeClass("active");
 }
 
+// function scrollToAnchor(anchor){
+//   var aTag = $("#"+ anchor +"-block");
+//   $('html,body').animate({scrollTop: aTag.offset().top-100},'slow');
+// }
+
 function scrollToAnchor(anchor){
   var aTag = $("#"+ anchor +"-block");
+  // var aTag = $('[name="'+anchor+'"]');
   $('html,body').animate({scrollTop: aTag.offset().top-100},'slow');
 }

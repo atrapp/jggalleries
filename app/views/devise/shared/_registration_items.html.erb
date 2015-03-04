@@ -1,0 +1,33 @@
+<% if user_signed_in? %>
+  <span class="user-menu pull-right">
+    <%=link_to "Sign out", destroy_user_session_path, method: :delete %>
+  </span>
+  <!-- Click this first 'Edit Profile' to get in to the path => not necessary anymore because ... -->
+  <span class="user-menu pull-right">
+    <%=link_to "Edit Profile", edit_user_registration_path %>
+  </span>
+
+  <!-- ... the modal is being loaded on Document Ready in jggalleries.js -->
+  <span class="user-menu pull-right">
+    <%= link_to "Show Edit Profile", "#editProfileModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small', id: "edit_profile_modal", :style => "visibility:hidden" %>
+  </span>
+
+<% else %>
+  <span class="user-menu pull-right">
+    <%= link_to "Sign Up", new_user_registration_path %>
+  </span>
+  <!-- Click this first 'Login' to get in to the path => not necessary anymore because ... -->
+  <span class="user-menu pull-right">
+    <%= link_to "Login", new_user_session_path %>
+  </span>
+
+  <!-- ... the modals are being loaded on Document Ready in jggalleries.js -->
+  <span class="user-menu pull-right">
+    <%= link_to "Show Login", "#loginModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small', id: "login_modal", :style => "visibility:hidden" %>
+  </span>
+
+  <span class="user-menu pull-right">
+    <%= link_to "Show Sign up", "#signupModal", :remote => true, "data-toggle" => "modal", :class => 'btn btn-small', id: "signup_modal", :style => "visibility:hidden" %>
+  </span>
+
+<% end %>
