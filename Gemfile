@@ -63,3 +63,6 @@ gem "omniauth"
 gem "devise"
 
 gem "kaminari"
+
+gem 'puma'
+
