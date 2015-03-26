@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :delete]
+  before_action :authenticate_user!, only: [:new, :create, :update, :delete]
   before_action :verify_authorship, only: [:destroy]
 
   def index
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    redirect_to blog_path(@post)
+    redirect_to posts_path(@post)
   end
 
   private
@@ -46,7 +46,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
 
     unless current_user==@comment.user or current_user.is_admin?
-      redirect_to blogs_path(@post)
+      redirect_to posts_path(@post)
     end
   end
 
