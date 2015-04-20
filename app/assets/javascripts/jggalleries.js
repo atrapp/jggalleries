@@ -37,4 +37,11 @@ $(function(){
     });
   });
 
+  $('#change_password_button').click(function(e){
+    e.preventDefault();
+    $('#password_section').show();
+    $('#change_password_button').hide();
+    $('#update_button').show();
+  });
+
 });

@@ -14,7 +14,7 @@
 
         <div class="post-entry">
 
-          <h4><%= link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page])%></h4>
+          <h4><%= link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page]) %></h4>
           <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
           <% if post.comments.count > 0 %> |
@@ -41,6 +41,10 @@
     </div>
 
     <div class="span6"><h2>New Post</h2></div>
+
+    <% if current_user && current_user.is_admin? %>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
 
   </div>
 

@@ -2,14 +2,13 @@ Rails.application.routes.draw do
 
   root 'welcome#index', :as => :root
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"}
 
   resources :blogs, only:[:index,:show]
 
   resources :posts do
     resources :comments, except: :update
   end
-
 
   # get '/galleries' => "welcome#galleries"
   # get '/buy'  => "welcome#buy"

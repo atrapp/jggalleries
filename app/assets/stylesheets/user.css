@@ -1,3 +1,20 @@
+.user-field {
+  width: 60%;
+}
+
+.readonly, .protected {
+  background-color: #f3f3f3;
+  border: none;
+}
+
+#password_section {
+  display: none;
+}
+
+#change_password_button {
+  margin: 10px 0;
+}
+
 .avatar_thumb {
   width: 100px;
   margin: 10px;
@@ -23,10 +40,3 @@ button {
   margin: 10px;
 }
 
-.left {
-  float: left;
-}
-
-.clear {
-  clear: both;
-}
