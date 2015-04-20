@@ -1,10 +1,13 @@
 body {
-  margin: 0 auto;
-  padding: 0;
+  /*margin: 0 auto;*/
+  /*padding: 0;*/
+  /*width: 960px;*/
+  /*font-family: 'Lato', sans-serif;*/
+  /*font-family: 'Quicksand', sans-serif;*/
+  /*font-family: 'Verdana', sans-serif;*/
 }
 
 header {
-
 }
 
 .wrapper {
@@ -25,8 +28,7 @@ h4 {
 }
 
 #footer {
-  height: 100px;
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -39,7 +41,7 @@ h4 {
   /*float: right;*/
   /*margin-left: 30px;*/
   /*padding: 5px;*/
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 .span8 {
@@ -60,10 +62,10 @@ h4 {
 
 /* added later */
 .span1, .span2, .span3, .span5, .span7, .span9, .span11 {
-  margin-top: 50px;
-  margin-left: 50px;
-  padding: 20px;
-  text-align: justify;
+  /*margin-top: 50px;*/
+  /*margin-left: 50px;*/
+  /*padding: 20px;*/
+  /*text-align: justify;*/
 }
 
 @media only screen and (max-width : 979px) {

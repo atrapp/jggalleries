@@ -8,6 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+
+  <!-- Fonts for "Studios" in bootstrap_and_overrides.css / .navbar .navbar-inner .brand span -->
+  <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+
   <%= csrf_meta_tags %>
 </head>
 
@@ -16,19 +23,9 @@
   <div id="wrapper">
 
     <header>
-      <%= nav_bar :fixed => :top, :responsive => true, :brand => "Jonathan Glass Studios" do %>
+      <%= nav_bar :fixed => :top, :responsive => true do %>
 
-        <div class="header-img pull-right">
-          <img src="<%= asset_path("jazzgalleryM.jpg") %>" >
-          <img src="<%= asset_path("luminariesM.jpg") %>" >
-          <img src="<%= asset_path("circleoftrustM.jpg") %>" >
-
-          <div class="login-area">
-            <%= menu_group :pull => "right" do %>
-              <%= render "devise/shared/registration_items" %>
-            <% end %>
-          </div>
-        </div>
+      <div class="brand">Jonathan Glass <span>Studios</span></div>
 
         <ul class="nav navbar-nav">
           <li class="home-menu"><a href="/#home">Home</a></li>
@@ -40,9 +37,14 @@
           <li class="studio-menu"><a href="/#studio">Studio</a></li>
         </ul>
 
-        <div class="clear"></div>
+        <div id="login-area">
+          <%= render "devise/shared/registration_items" %>
+        </div>
 
-        <div class="message-area">
+
+        <!-- <div class="clear"></div> -->
+        <!-- <hr> -->
+        <!-- <div class="message-area">
 
           <div class="quote pull-left">
             "Donec nisi justo, eleifend feugiat orci at, bibendum vehicula sapien."<span class="quote_source">John Doe</span>
@@ -52,7 +54,7 @@
             <p>Next event: 02/03/15 Exhibit at the Fountain House Gallery, 123 West 56th St, NY<p>
           </div>
 
-        </div>
+        </div> -->
 
       <% end %>
     </header>
@@ -62,6 +64,12 @@
     </div>
 
     <div id="footer">
+      <div id="social_icons">
+        <a href="https://youtu.be/rmyzOU6ftHE" target="_blank"><img src="<%= asset_path("youtube.png") %>" alt="Youtube Icon"></a>
+        <a href="#" target="_blank"><img src="<%= asset_path("twitter.png") %>" alt="Twitter Icon"></a>
+        <a href="#" target="_blank"><img src="<%= asset_path("facebook.png") %>" alt="Facebook Icon"></a>
+        <a href="#" target="_blank"><img src="<%= asset_path("pinterest.png") %>" alt="Pinterest Icon"></a>
+      </div>
       <p>Copyright &copy; 2015, Jonathan Glass</p>
     </div>
   </div>
