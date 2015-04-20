@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
 
   def is_admin?
     ["jglass", "rstrong", "atrapp"].include? self.username
+    # ["admin"].include? self.role
   end
 
 end

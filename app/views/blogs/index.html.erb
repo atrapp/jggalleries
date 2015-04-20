@@ -1,35 +1,47 @@
-<h1 class="blog_header">Jonathan's Blog</h1>
+<div class="large-space"></div>
 
+<h1 class="blog-header">Jonathan's Blog</h1>
 
-<% @posts.each do |post|%>
+<div class="blog-posts">
 
-  <div class="post-entry">
+  <div class="row-fluid">
 
-    <h2><%=link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page])%></h2>
-    <p><%=post.created_at.strftime("%B %d, %Y")%></p>
+    <div class="span6">
 
-    <p><%= if post.comments.count>0%> |
-      <%= link_to pluralize(post.comments.count, "comment"), blogs_path(post, url_slug: params[:url_slug], index_page: params[:page])+"#comments" %>
-      <%end%>
-      </p>
+      <h2>All Posts</h2>
 
+      <% @posts.each do |post| %>
 
-    <div class="post-body">
-      <%if post==@posts.first%>
-        <%post.body.html_safe%>
-        <br>
-      <%=link_to "show", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page])%>
-      <%else%>
-      <%=truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "")%>
-      <br>
-      <%=link_to "see more", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page])%>
-      <%end%>
+        <div class="post-entry">
 
+          <h4><%= link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page])%></h4>
+          <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
+          <% if post.comments.count > 0 %> |
+            <%= link_to pluralize(post.comments.count,"comment"), blog_path(post, url_slug: params[:url_slug], index_page: params[:page])+"#comments" %>
+          <% end %>
+
+          <div class="post-body">
+            <% if post == @posts.first %>
+              <% post.body.html_safe %>
+              <br>
+              <%= link_to "show", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page]) %>
+              <% else %>
+              <%= truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "") %>
+              <br>
+              <%= link_to "see more", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page]) %>
+
+            <% end %>
+          </div>
+
+        </div>
+        <hr>
+      <% end %>
 
     </div>
 
+    <div class="span6"><h2>New Post</h2></div>
 
   </div>
 
-<%end%>
+</div>

@@ -17,13 +17,18 @@ header {
   clear: both;
 }
 
-/*.space-large {
-  margin-top: 300px;
-}*/
+.large-space {
+  height: 160px;
+}
 
 h4 {
   font-size: 22px;
   font-weight: bold;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
 }
 
 #footer {

@@ -178,7 +178,6 @@
   <div class="clear"></div>
 </div>
 
-
 <div id="buy-block" class="information" name="buy">
   <h3>Buy</h3>
     <p>
@@ -188,22 +187,22 @@
 
 <div id="blog-block" class="information" name="blog">
   <p>
-    <h1 class="blog_header">Jonathan's Blog</h1>
+    <h1 class="blog-header">Jonathan's Blog</h1>
 
     <% @posts.each do |post|%>
 
       <div class="post-entry">
-        <h2><%=link_to post.title, post_path(post.id) %></h2>
-        <p><%=post.created_at.strftime("%B %d, %Y")%></p>
+        <h2><%= link_to post.title, post_path(post.id) %></h2>
+        <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
         <div class="post-body">
-          <%if post==@posts.first%>
-            <%post.body.html_safe%>
-          <%end%>
+          <% if post==@posts.first %>
+            <% post.body.html_safe %>
+          <% end %>
         </div>
       </div>
       <hr>
-    <%end%>
+    <% end %>
     <%= link_to 'New Post', new_post_path %>
   </p>
 </div>

@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<div class="post-entry">
-          <h2><%=@post.title%></h2>
-          <p><%= @post.created_at.strftime("%B %d, %Y")%></p>
+<div class="row-fluid">
 
-            <p><%if @post.comments.count> 0 %>
-              <%=link_to pluralize(@post.comments.count,"comment"), blog_path(@post)+"#comments" %>
-            <%end%>
-          </p>
-          <p class="post-body"><%=@post.body.html_safe%></p>
+  <div class="post-entry">
 
-          <hr />
+    <h2><%=@post.title%></h2>
+    <p><%= @post.created_at.strftime("%B %d, %Y")%></p>
 
-          <p class="post-button">
-            <%= link_to 'Edit', edit_post_path(@post) %>
-          </p>
-           <p class="post-button">
-            <%= link_to 'Back', posts_path %>
-          </p>
+      <p><%if @post.comments.count> 0 %>
+        <%=link_to pluralize(@post.comments.count,"comment"), blog_path(@post)+"#comments" %>
+      <%end%>
+    </p>
+    <p class="post-body"><%=@post.body.html_safe%></p>
 
-        </div>
+    <hr />
+
+    <p class="post-button">
+      <%= link_to 'Edit', edit_post_path(@post) %>
+    </p>
+     <p class="post-button">
+      <%= link_to 'Back', posts_path %>
+    </p>
+
+  </div>
+
+</div>
