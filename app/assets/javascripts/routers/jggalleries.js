@@ -11,12 +11,6 @@ Jggalleries.Router = Backbone.Router.extend({
     'studio'    : 'studio',
   },
 
-  // home: function(){
-  //     removeActiveClass();
-  //     $(".home-menu").addClass("active");
-  //     $("html, body").animate({ scrollTop: 0 }, "slow");
-  // },
-
   home: function(){
       removeActiveClass();
       $(".home-menu").addClass("active");
@@ -72,13 +66,7 @@ function removeActiveClass(){
   $(".studio-menu").removeClass("active");
 }
 
-// function scrollToAnchor(anchor){
-//   var aTag = $("#"+ anchor +"-block");
-//   $('html,body').animate({scrollTop: aTag.offset().top-100},'slow');
-// }
-
 function scrollToAnchor(anchor){
   var aTag = $("#"+ anchor +"-block");
-  // var aTag = $('[name="'+anchor+'"]');
-  $('html,body').animate({scrollTop: aTag.offset().top-100},'slow');
+  $('html,body').animate({scrollTop: aTag.offset().top-180},'slow'); // 180px = navbar height
 }

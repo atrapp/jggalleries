@@ -1,28 +1,12 @@
-#login-area a{
+#login-area a {
   font-size: 0.7em;
   margin: 5px;
 }
-
-/*.user-menu a {
-  font-size: 0.8em;
-  padding: 5px;
-}*/
-
-/*.message-area {
-  //border-top: 1px solid black;
-  height: 40px;
-  font-family: 'Gloria Hallelujah', cursive;
-  //color: #a19b96;
-  //background: #a19b96;
-  font-size: .8em;
-}*/
-
 
 #portrait_pic {
   text-align: center;
   padding: 30px 0;
   margin-bottom: 20px;
-  /*border: 1px solid yellow;*/
 }
 
 #portrait_pic img {
@@ -31,7 +15,6 @@
 
 #quotes {
   margin-bottom: 20px;
-  /*border: 1px solid blue;*/
 }
 
 .quote {
@@ -48,7 +31,6 @@
 #event_note {
   position: relative;
   text-align: center;
-  /*border: 1px solid red;*/
 }
 
 #event_note div {
@@ -65,21 +47,11 @@
 
 #about-artist {
   /*background-color: #a9b0b4;*/
+  /*background-color: #dedede;*/
   background: image-url("beige_paper.png");
-   /*background-color: #dedede;*/
-  /*color: white;*/
   padding: 20px;
   font-size: 1.1em;
   text-align: justify;
-}
-
-#social_icons {
-  /*text-align: center;*/
-  margin-bottom: 30px;
-}
-
-#social_icons img {
-  padding: 10px;
 }
 
 .gallery-img {
@@ -95,37 +67,31 @@
    text-align: left;
    padding-left: 5px;
 }
+
 .contact-field {
   width: 400px;
 }
 
-#video {
-  /*margin-top: 150px;*/
-  /*vertical-align: bottom;*/
-  /*padding: 50px 0;*/
+#social_icons {
+  margin-bottom: 30px;
+}
+
+#social_icons img {
+  padding: 10px;
 }
 
 .information {
   margin: 0 auto;
   padding: 50px;
-  /*background-color:red;*/
 }
-
-/*#intro-block {
-  background-color: orange;
-}*/
-
-/*#info-block {
-  background-color: orange;
-}*/
 
 #home-block {
   padding-top: 220px;
-    /*background-color: #56636f;*/
-    /*background-color: #a9b0b4;*/
-    /*background-color: #000000;*/
+  /*background-color: #56636f;*/
+  /*background-color: #a9b0b4;*/
+  /*background-color: #000000;*/
   background: image-url("dark_brick_wall.png");
-  /*background: image-url("brickwall.png") repeat right top;*/
+  /*background: image-url("brickwall.png");*/
 }
 
 #about-block {
@@ -134,24 +100,28 @@
 }
 
 #galleries-block {
-  /*padding-top: 200px;*/
   background-color: #1d1a26;
 }
 
-/*#jazz-block {
+#gallery-container {
+  max-height: 500px;
+  /*margin-bottom: 30px;*/
+}
 
-}*/
+#gallery-container img {
+  width: 100%;
+}
+
+.gallery-img {
+  margin-bottom: 15px;
+}
 
 #buy-block {
   background-color: #d1c098;
 }
 
-/*#events-block {
-
-}*/
-
 #blog-block {
-  /*background-color: violet;*/
+  background: image-url("handmadepaper.png");
 }
 
 #contact-block {

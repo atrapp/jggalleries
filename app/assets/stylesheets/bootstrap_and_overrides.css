@@ -51,14 +51,11 @@
 .navbar .navbar-inner .nav {
   padding-top: 30px;
   font-size: 0.9em;
-  /*color: #000000 !important;*/
 }
 
-/*is what defines your button color ??? - does not work*/
-/*.navbar-inverse .btn-navbar {
-  background: blue;
-}*/
-
+.form-button {
+  padding-top: 20px;
+}
 /*.shrink {
   opacity: 0.4;
   height: 50px;

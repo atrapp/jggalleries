@@ -132,43 +132,6 @@
         </div>
       </div>
 
-      <!--
-      <div id="social_icons">
-        <img src="<%= asset_path("social_youtube.png") %>" alt="Google Email Icon">
-        <img src="<%= asset_path("social_twitter.png") %>" alt="Note">
-        <img src="<%= asset_path("social_facebook.png") %>" alt="Note">
-        <img src="<%= asset_path("social_pinterest.png") %>" alt="Note">
-      </div>
-      -->
-
-      <!--
-      <div id="social_icons">
-        <img src="<%= asset_path("youtube-icon.png") %>" alt="Google Email Icon">
-        <img src="<%= asset_path("twitter-icon.png") %>" alt="Note">
-        <img src="<%= asset_path("facebook-icon.png") %>" alt="Note">
-        <img src="<%= asset_path("pinterest-icon.png") %>" alt="Note">
-      </div>
-      -->
-
-      <!--
-      <div id="social_icons">
-        <img src="<%= asset_path("youtube_icon.png") %>" alt="Google Email Icon">
-        <img src="<%= asset_path("twitter_icon.png") %>" alt="Note">
-        <img src="<%= asset_path("facebook_icon.png") %>" alt="Note">
-        <img src="<%= asset_path("pinterest_icon.png") %>" alt="Note">
-      </div>
-      -->
-
-      <!-- http://www.awicons.com/free-icons/social-media-icons/round-simple-social-icons-by-lokas-software/ -->
-      <!--
-      <div id="social_icons">
-        <img src="<%= asset_path("youtube.png") %>" alt="Youtube Icon">
-        <img src="<%= asset_path("twitter.png") %>" alt="Twitter Icon">
-        <img src="<%= asset_path("facebook.png") %>" alt="Facebook Icon">
-        <img src="<%= asset_path("pinterest.png") %>" alt="Pinterest Icon">
-      </div>
-      -->
-
     </div>
 
     <div class="span1 pull-left"></div>
@@ -181,41 +144,46 @@
   <div class="row-fluid">
 
     <div id="gallery-container" class="span6">
-       <img src="<%= asset_path("jazzgalleryB.jpg") %>" >
+       <img src="<%= asset_path("jazzgalleryB.jpg") %>" alt="Selected Gallery">
     </div>
 
     <div class="span6">
 
       <div class="row-fluid">
         <div id="gallery1" class="gallery-img span6" >
-          <img src="<%= asset_path("jazzgalleryB.jpg") %>" >
+          <img src="<%= asset_path("jazzgalleryB.jpg") %>" alt="Gallery Jazz">
           <h3>Jazz Gallery</h3>
         </div>
         <div id="gallery2" class="gallery-img span6">
-          <img src="<%= asset_path("womenjazzB.jpg") %>" >
+          <img src="<%= asset_path("womenjazzB.jpg") %>" alt="Gallery Women & Jazz">
           <h3>Women and Jazz</h3>
         </div>
       </div>
-<p></p>
+
       <div class="row-fluid">
         <div id="gallery3" class="gallery-img span6">
-          <img src="<%= asset_path("luminariesB.jpg") %>" >
+          <img src="<%= asset_path("luminariesB.jpg") %>" alt="Gallery Luminaries">
           <h3>Luminaries</h3>
         </div>
         <div id="gallery4" class="gallery-img span6">
-          <img src="<%= asset_path("circleoftrustB.jpg") %>" >
+          <img src="<%= asset_path("circleoftrustB.jpg") %>" alt="Gallery Circle of Trust">
           <h3>Circle of Trust</h3>
         </div>
       </div>
 
     </div>
+
   </div>
+
   <div class="clear"></div>
 </div>
 
 
 <div id="buy-block" class="information" name="buy">
   <h3>Buy</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi justo, eleifend feugiat orci at, bibendum vehicula sapien. Sed tincidunt imperdiet arcu, vel venenatis quam ornare a. Sed venenatis orci eu ligula aliquam, placerat blandit quam pharetra. Nunc non lacus nisi. Aliquam malesuada risus a ipsum posuere, ac sollicitudin lorem rhoncus. Vestibulum aliquam, odio ac tempor tincidunt, sem nulla pharetra nulla, sed hendrerit enim risus quis dui. Sed vel porta arcu. Proin a sollicitudin lectus. Suspendisse in euismod neque. Fusce adipiscing feugiat mauris a consequat. Aliquam erat volutpat.
+    </p>
 </div>
 
 <div id="blog-block" class="information" name="blog">
@@ -255,7 +223,7 @@
         <%= email_field_tag 'email', nil, class: 'form-control contact-field' %>
       </div>
       <div class="form-group">
-        <%= label_tag 'comments', 'Comments' %>
+        <%= label_tag 'comments', 'Your message' %>
         <%= text_area_tag 'comments', nil, class: 'form-control contact-field', rows: 10 %>
       </div>
       <div class="form-button">
