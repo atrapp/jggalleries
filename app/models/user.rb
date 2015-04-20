@@ -18,8 +18,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def is_admin?
-    ["jglass", "rstrong", "atrapp"].include? self.username
-    # ["admin"].include? self.role
+    ["admin"].include? self.role
   end
 
 end
