@@ -14,23 +14,22 @@
 
         <div class="post-entry">
 
-          <h4><%= link_to post.title, blog_path(post, url_slug: params[:url_slug], index_page: params[:page]) %></h4>
+          <h4><%= link_to post.title, blog_path(post) %></h4>
           <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
-          <% if post.comments.count > 0 %> |
-            <%= link_to pluralize(post.comments.count,"comment"), blog_path(post, url_slug: params[:url_slug], index_page: params[:page])+"#comments" %>
+          <% if post.comments.count > 0 %>
+            <%= link_to pluralize(post.comments.count,"comment"), blog_path(post)+"#comments" %>
           <% end %>
 
           <div class="post-body">
             <% if post == @posts.first %>
-              <% post.body.html_safe %>
+              <%= post.body.html_safe %>
               <br>
               <%= link_to "show", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page]) %>
-              <% else %>
+            <% else %>
               <%= truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "") %>
               <br>
               <%= link_to "see more", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page]) %>
-
             <% end %>
           </div>
 

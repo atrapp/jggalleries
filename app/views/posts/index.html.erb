@@ -1,40 +1,33 @@
-<h1 class="blog_header">Posts Administration Panel</h1>
+<div class="large-space"></div>
 
+<h1 class="blog-header">Posts Administration Panel</h1>
 
-        <table class="post-list">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <!-- <th>Body</th> -->
-                <th>Author</th>
-                <!-- <th>Categories</th> -->
-                <th>Created at</th>
-                <th colspan="3"></th>
-              </tr>
-            </thead>
+<!-- <table class="post-list"> -->
+<table class="table"> <!-- using bootstrap class 'table' -->
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Created</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.user.username %></td>
+        <td><%= post.created_at.strftime("%B %d, %Y") %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure you want to delete your post?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-            <tbody>
-              <% @posts.each do |post| %>
-                <tr>
-                  <td><%= post.title %></td>
-                  <!-- <td><%= link_to post.title, post %></td> -->
-                  <!-- <td><%= truncate(post.body.gsub(/<[^>]*>/ui,''),length: 140, separator: " ") %></td> -->
-                  <td><%= post.user.username %></td>
-                 <!--    -->
-                  <td><%= post.created_at.strftime("%B %d, %Y") %></td>
-                  <td><%= link_to 'Show', post %></td>
-                  <td><%= link_to 'Edit', edit_post_path(post) %></td>
-                  <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure you want to delete your post?' } %></td>
-                </tr>
-              <% end %>
-            </tbody>
-        </table>
-
-        <br>
-        <p class="post-button">
-          <%= link_to 'New Post', new_post_path %>
-        </p>
-
-        <p class="post-button">
-            <%= link_to 'Exit Admin', root_path %>
-        </p>
+<hr>
+<div class="post-buttons">
+  <%= link_to 'New Post', new_post_path, class: 'post-button' %>
+  <%= link_to 'Exit Admin', root_path, class: 'post-button' %>
+</div>
