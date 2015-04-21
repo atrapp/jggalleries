@@ -192,7 +192,7 @@
     <% @posts.each do |post|%>
 
       <div class="post-entry">
-        <h3 class="post-entry-header"><%= link_to post.title, post_path(post.id) %></h3>
+        <h3 class="post-entry-header"><%= link_to post.title, post_path(post) %></h3>
         <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
         <div class="post-body">
@@ -202,6 +202,10 @@
       <hr>
     <% end %>
   </p>
+
+  <div class="post-buttons">
+    <%= link_to "read more", blogs_path, class: 'post-button' %>
+  </div>
 </div>
 
 <div id="contact-block" class="information" name="contact">

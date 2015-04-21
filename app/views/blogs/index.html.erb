@@ -2,49 +2,29 @@
 
 <h1 class="blog-header">Jonathan's Blog</h1>
 
-<div class="blog-posts">
+<% @posts.each do |post| %>
+  <div class="post-entry">
 
-  <div class="row-fluid">
+    <h3 class="post-entry-header"><%= link_to post.title, post_path(post) %></h3>
+    <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
-    <div class="span6">
-
-      <h2>All Posts</h2>
-
-      <% @posts.each do |post| %>
-
-        <div class="post-entry">
-
-          <h4><%= link_to post.title, blog_path(post), class: 'post-entry-header' %></h4>
-          <p><%= post.created_at.strftime("%B %d, %Y") %></p>
-
-          <% if post.comments.count > 0 %>
-            <%= link_to pluralize(post.comments.count,"comment"), blog_path(post)+"#comments" %>
-          <% end %>
-
-          <div class="post-body">
-            <% if post == @posts.first %>
-              <%= post.body.html_safe %>
-              <br>
-              <%= link_to "show", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page]) %>
-            <% else %>
-              <%= truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "") %>
-              <br>
-              <%= link_to "see more", blogs_path(post, url_slug: params[:url_slug], index_page: params[:page]) %>
-            <% end %>
-          </div>
-
-        </div>
-        <hr>
+    <div class="post-body">
+      <% if post == @posts.first %>
+        <%= post.body.html_safe %>
+      <% else %>
+        <%= truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "") %>
+        <br>
+        <%= link_to "read more", post_path(post) %>
       <% end %>
-
     </div>
 
-    <div class="span6"><h2>New Post</h2></div>
-
-    <% if current_user && current_user.is_admin? %>
-      <%= link_to 'New Post', new_post_path %>
-    <% end %>
-
   </div>
+  <hr>
+<% end %>
 
-</div>
+
+<% if current_user && current_user.is_admin? %>
+  <div class="post-buttons">
+    <%= link_to 'New Post', new_post_path, class: 'post-button' %>
+  </div>
+<% end %>
