@@ -2,25 +2,13 @@
 
 <h1 class="blog-header">Jonathan's Blog</h1>
 
-<% @posts.each do |post| %>
-  <div class="post-entry">
+<div id="paginator" class="pagination_div">
+  <%= paginate @posts, :remote => true %>
+</div>
 
-    <h3 class="post-entry-header"><%= post.title %></h3>
-    <p><%= post.created_at.strftime("%B %d, %Y") %></p>
-
-    <div class="post-body">
-      <% if post == @posts.first %>
-        <%= post.body.html_safe %>
-      <% else %>
-        <%= truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "") %>
-        <br>
-        <%= link_to "read more", post_path(post) %>
-      <% end %>
-    </div>
-
-  </div>
-  <hr>
-<% end %>
+<div id="posts">
+  <%= render @posts %>
+</div>
 
 <% if current_user && current_user.is_admin? %>
   <div class="post-buttons">

@@ -1,0 +1,20 @@
+<!-- This partial is needed for Kaminari Ajax pagination in views/blogs/index.html.erb
+and views/blogs/index.js.erb -->
+
+<div class="post-entry">
+
+<h3 class="post-entry-header"><%= post.title %></h3>
+<p><%= post.created_at.strftime("%B %d, %Y") %></p>
+
+<div class="post-body">
+  <% if post == @posts.first %>
+    <%= post.body.html_safe %>
+  <% else %>
+    <%= truncate(post.body.gsub(/<[^>]*>/ui, ''), length: 400, separator: "") %>
+    <br>
+    <%= link_to "read more", post_path(post) %>
+  <% end %>
+</div>
+
+</div>
+<hr>
