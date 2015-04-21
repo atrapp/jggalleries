@@ -6,23 +6,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*.post-list {
-  font-size: 1.2em;
-  margin: 30px auto;
-}*/
-
-/*.post-list thead, tbody {
-  border-bottom: 1px solid white ;
+.post-header {
+  color: white;
+  background: black;
+  padding: 20px;
+  text-align: center;
 }
 
-.post-list th, td {
-  padding: 10px 20px;
-  text-align: left;
-}*/
-
 .post-entry {
-  margin-top: 50px;
+  width: 90%;
+  margin: 50px auto;
   text-align: center;
+  background-color: #a9b0b4;
+}
+
+.post-entry-header {
+  padding-top: 20px;
+}
+
+.post-entry-header a {
+  text-decoration: none;
+}
+
+.post-body {
+  padding: 20px 150px;
+  /*background-color: yellow;*/
+  /*background: image-url("beige_paper.png");*/
+  background-color: #dedede;
+}
+
+.post-title-field {
+  width: 90%;
 }
 
 .post-buttons {
@@ -39,57 +53,9 @@
   border-radius: 100%;
 }
 
-
-/********************************/
-
-
-
-.post-header {
-  color: white;
-  background: black;
-  padding: 20px;
-  text-align: center;
-}
-
-.post-label {
-  font-size: 1.5em;
-  padding-top: 30px;
-
-}
-
-.post-title-field {
-  width: 70%;
-}
-
-.post-checkbox-field {
-  font-size: 1.2em;
-  padding-bottom: 10px;
-  padding-left: 20px;
-}
-
-.post-body {
-  /*width: 70%;
-  margin-top: 80px;
-  padding-bottom: 80px;
-  border-bottom:solid 30px black;
-  background-color: yellow;
-  font-size: 1.2em*/
-
-}
-
-
-p {
-  margin-bottom: 30px;
-  /*color: green;*/
-}
-
-
-.post-entry {
-/*margin-top: 80px;*/
-
-}
-
-
 .post-actions {
+  padding: 20px;
   margin: 30px 0;
+  border: 1px solid red;
 }
+

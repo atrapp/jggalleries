@@ -14,7 +14,7 @@
 
         <div class="post-entry">
 
-          <h4><%= link_to post.title, blog_path(post) %></h4>
+          <h4><%= link_to post.title, blog_path(post), class: 'post-entry-header' %></h4>
           <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
           <% if post.comments.count > 0 %>

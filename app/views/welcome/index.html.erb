@@ -192,7 +192,7 @@
     <% @posts.each do |post|%>
 
       <div class="post-entry">
-        <h3><%= link_to post.title, post_path(post.id) %></h3>
+        <h3 class="post-entry-header"><%= link_to post.title, post_path(post.id) %></h3>
         <p><%= post.created_at.strftime("%B %d, %Y") %></p>
 
         <div class="post-body">
@@ -200,10 +200,6 @@
         </div>
       </div>
       <hr>
-    <% end %>
-
-    <% if current_user && current_user.is_admin? %>
-      <%= link_to 'New Post', new_post_path %>
     <% end %>
   </p>
 </div>

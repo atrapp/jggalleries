@@ -1,10 +1,10 @@
 <%= tinymce_assets %>
 
 <%= form_for(@post) do |f| %>
+
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -16,17 +16,15 @@
   <div class="post-entry">
 
     <div class="field">
-      <%= f.label :title, class: 'post-label' %><br>
-      <%= f.text_field :title, class: 'post-title-field' %>
+      <%= f.text_field :title, class: 'post-title-field', placeholder: 'Title of your post' %>
     </div>
     <div class="field">
-      <%= f.label :body, class: 'post-label' %><br>
-      <%= f.text_area :body, :class => "tinymce", :rows => 10, :cols => 100 %>
+      <%= f.text_area :body, :class => "tinymce", :rows => 10 %>
       <%= tinymce %>
     </div>
 
     <div class="post-actions">
-      <%= f.submit %>
+      <%= f.submit  %>
     </div>
 
   </div>
