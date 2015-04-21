@@ -48,7 +48,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  # gem 'puma' # recommended Webserver for Heroku, locally Webrick
+  gem 'puma' # recommended Webserver for Heroku, locally Webrick
 end
 
 gem 'backbone-on-rails'
