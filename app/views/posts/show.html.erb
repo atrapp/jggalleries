@@ -5,22 +5,15 @@
   <div class="post-entry">
 
     <h2><%= @post.title %></h2>
-    <p><%= @post.created_at.strftime("%B %d, %Y")%></p>
+    <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
 
-      <p><%if @post.comments.count> 0 %>
-        <%=link_to pluralize(@post.comments.count,"comment"), blog_path(@post)+"#comments" %>
-      <%end%>
-    </p>
-    <p class="post-body"><%=@post.body.html_safe%></p>
+    <p class="post-body"><%= @post.body.html_safe %></p>
 
-    <hr />
-
-    <span class="post-button">
-      <%= link_to 'Edit', edit_post_path(@post) %>
-    </span>
-     <span class="post-button">
-      <%= link_to 'Back', posts_path %>
-    </span>
+    <hr>
+    <div class="post-buttons">
+      <%= link_to 'Edit', edit_post_path(@post), class: 'post-button' %>
+      <%= link_to 'Back', posts_path, class: 'post-button' %>
+    </div>
 
   </div>
 
