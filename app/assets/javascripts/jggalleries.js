@@ -44,4 +44,9 @@ $(function(){
     $('#update_button').show();
   });
 
+  $('.back_link').click(function() {
+    window.history.back();
+    return false;
+  });
+
 });
