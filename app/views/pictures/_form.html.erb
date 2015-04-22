@@ -1,1 +1,23 @@
-_form.html.erb
+<%= form_for @picture, :url => pictures_path, :html => { :multipart => true } do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label "Item ID" %>
+    <%= form.text_field :item_id %>
+  </div>
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_field :caption %>
+  </div>
+  <div class="field">
+    <%= form.label "Creation Date" %>
+    <%= form.text_field :creation_date %>
+  </div>
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+  <div class="actions"><%= form.submit %></div>
+<% end %>

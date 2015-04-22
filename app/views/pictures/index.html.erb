@@ -1,1 +1,6 @@
-index.html.erb
+<div class="large-space"></div>
+
+<h2>All pictures</h2>
+<% @pictures.each do |picture| %>
+    <div class="image_pic"><%= image_tag picture.image.url(:medium) %></div>
+<% end %>

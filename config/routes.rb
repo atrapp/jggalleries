@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :comments, except: :update
   end
 
+  resources :pictures
+
   # get '/galleries' => "welcome#galleries"
   # get '/buy'  => "welcome#buy"
   # get '/about'  => "welcome#about"
