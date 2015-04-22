@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index', :as => :root
 
   devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"}
+  resources :users
 
   resources :blogs, only:[:index,:show]
 
