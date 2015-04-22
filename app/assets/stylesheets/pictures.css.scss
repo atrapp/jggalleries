@@ -2,22 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .image_pic {
-  float: left;
-  margin: 20px;
+  max-width: 300px;
+  margin: 10px 20px 10px 0;
   padding: 20px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
+}
 
+.image_pic img {
+  width: 100%;
+  /*box-shadow: 3px 3px 5px lightgrey;*/
 }
 
 .image_desc {
   margin-top: 10px;
   text-align: center;
-  border: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .image_desc p {
-  /*border: 1px solid lightgrey;*/
+
 }
 
+.image_links {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.image_links a {
+  padding: 5px;
+  text-decoration: none;
+}
