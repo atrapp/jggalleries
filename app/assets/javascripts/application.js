@@ -17,5 +17,6 @@
 //= require backbone
 //= require jggalleries
 //= require parallax
+//= require fancybox
 //= require_tree ./routers
 //= require_tree .

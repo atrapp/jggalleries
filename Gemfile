@@ -67,3 +67,5 @@ gem "omniauth"
 gem "devise"
 
 gem "kaminari"
+
+gem 'fancybox2-rails', '~> 0.2.8'  #popup windows, e.g. for picture gallery -> licence needed for commercial use ($19 for single domain)

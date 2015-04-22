@@ -49,4 +49,6 @@ $(function(){
     return false;
   });
 
+  $("a.fancybox").fancybox();
+
 });

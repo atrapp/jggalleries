@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :pictures
 
+  get '/admin' => "welcome#admin", :as => :admin
+
   # get '/galleries' => "welcome#galleries"
   # get '/buy'  => "welcome#buy"
   # get '/about'  => "welcome#about"

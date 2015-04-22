@@ -1,6 +1,17 @@
 <div class="large-space"></div>
 
-<h2>All pictures</h2>
+<h1 class="page-header">All pictures</h1>
+
 <% @pictures.each do |picture| %>
-    <div class="image_pic"><%= image_tag picture.image.url(:medium) %></div>
+  <div class="image_pic">
+    <a href="<%= picture.image.url(:original) %>" class="fancybox">
+      <%= image_tag picture.image.url(:medium) %>
+    </a>
+    <div class="image_desc">
+      <p><%= picture.title %></p>
+      <p><%= picture.item_id %></p>
+      <p><%= picture.caption %></p>
+      <p><%= picture.creation_date %></p>
+    </div>
+  </div>
 <% end %>

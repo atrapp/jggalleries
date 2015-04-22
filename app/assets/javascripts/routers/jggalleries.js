@@ -9,6 +9,7 @@ Jggalleries.Router = Backbone.Router.extend({
     'blog'      : 'blog',
     'contact'   : 'contact',
     'studio'    : 'studio',
+    'admin'     : 'admin'
   },
 
   home: function(){
@@ -52,6 +53,12 @@ Jggalleries.Router = Backbone.Router.extend({
     removeActiveClass();
     $(".studio-menu").addClass("active");
     scrollToAnchor('studio');
+  },
+
+  admin: function(){
+    removeActiveClass();
+    $(".admin-menu").addClass("active");
+    window.open('/admin', '_self', false);
   },
 
 })
