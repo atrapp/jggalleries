@@ -3,15 +3,24 @@
 <h1 class="page-header">All pictures</h1>
 
 <% @pictures.each do |picture| %>
+
   <div class="image_pic">
+
     <a href="<%= picture.image.url(:original) %>" class="fancybox">
       <%= image_tag picture.image.url(:medium) %>
     </a>
+
     <div class="image_desc">
-      <p><%= picture.title %></p>
       <p><%= picture.item_id %></p>
+      <p><%= picture.title %></p>
       <p><%= picture.caption %></p>
       <p><%= picture.creation_date %></p>
     </div>
+
+    <%= link_to 'Show', picture %>
+    <%= link_to 'Edit', edit_picture_path(picture) %>
+    <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+
   </div>
+
 <% end %>
