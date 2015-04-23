@@ -14,13 +14,13 @@
 <hr>
 
 <% if current_user && current_user.is_admin? %>
-  <div class="post-buttons">
-    <%= link_to 'Back', '#', class: 'back_link post-button' %>
-    <%= link_to 'Edit', edit_post_path(@post), class: 'post-button' %>
-    <%= link_to 'All posts', posts_path, class: 'post-button' %>
+  <div class="my-buttons">
+    <%= link_to 'Back', '#', class: 'back_link my-button' %>
+    <%= link_to 'Edit', edit_post_path(@post), class: 'my-button' %>
+    <%= link_to 'All posts', posts_path, class: 'my-button' %>
   </div>
 <% else %>
-  <div class="post-buttons">
-    <%= link_to 'Back', '#', class: 'back_link post-button' %>
+  <div class="my-buttons">
+    <%= link_to 'Back', '#', class: 'back_link my-button' %>
   </div>
 <% end %>
