@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :pictures
+  resources :galleries
 
   get '/admin' => "welcome#admin", :as => :admin
 
