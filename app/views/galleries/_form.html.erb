@@ -1,1 +1,27 @@
-_form.html.erb
+<%= form_for @gallery, :html => { :multipart => true } do |form| %>
+
+  <div class="row-fluid">
+
+    <div class="span2"></div>
+
+    <div class="span8">
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "user-field" %>
+      </div>
+      <div class="field">
+        <%= form.label :caption %>
+        <%= form.text_area :caption, rows: 5, class: "user-field" %>
+      </div>
+    </div>
+
+    <div class="span2"></div>
+
+  </div>
+
+  <hr>
+  <div class="actions">
+    <button type="submit" class="btn">Save</button>
+  </div>
+<% end %>
+

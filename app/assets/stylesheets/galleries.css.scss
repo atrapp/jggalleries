@@ -1,3 +1,17 @@
 // Place all the styles related to the Galleries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.gallery_details {
+  margin: 20px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+.gallery_links {
+  margin: 10px 0;
+}
+
+.gallery_links a {
+  padding: 5px 5px 5px 0;
+}

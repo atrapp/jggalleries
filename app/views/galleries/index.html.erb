@@ -6,7 +6,21 @@
 
   <% @galleries.each do |gallery| %>
 
+    <div class="gallery_details">
+      <h2>
+        <%= gallery.name %>
+      </h2>
+      <div>
+        <%= gallery.caption %>
+      </div>
 
+      <div class="gallery_links">
+        <%= link_to 'Show', gallery %>
+        <%= link_to 'Edit', edit_gallery_path(gallery) %>
+        <%= link_to 'Delete', gallery, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+
+    </div>
 
   <% end %>
 

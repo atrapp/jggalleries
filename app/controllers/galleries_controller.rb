@@ -3,7 +3,7 @@ class GalleriesController < ApplicationController
   before_action :set_gallery, only: [:show, :edit, :update, :destroy]
 
   def index
-    @galleries = Gallery.all
+    @galleries = Gallery.all.order("name ASC")
   end
 
   def new

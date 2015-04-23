@@ -1,1 +1,31 @@
-show.html.erb
+<div class="large-space"></div>
+
+<h1 class="page-header">Gallery details</h1>
+
+<div class="container">
+
+  <div class="row-fluid">
+
+    <div class="span2"></div>
+
+    <div class="span8">
+      <div class="center">
+        <h2>
+          <%= @gallery.name %>
+        </h2>
+        <div>
+          <%= @gallery.caption %>
+        </div>
+      </div>
+    </div>
+
+  <div class="span2"></div>
+
+  </div>
+
+</div>
+
+<hr>
+<div class="my-buttons">
+  <%= link_to 'Back', '#', class: 'back_link my-button' %>
+</div>
