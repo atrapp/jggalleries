@@ -2,6 +2,42 @@
 
 <h1 class="page-header">Picture details</h1>
 
-<%= image_tag @picture.image.url %>
-<%= image_tag @picture.image.url(:medium) %>
-<%= image_tag @picture.image.url(:thumb) %>
+<div class="container">
+
+  <div class="row-fluid picture_display">
+
+    <div class="span6 picture_display_image">
+      <a href="<%= @picture.image.url(:original) %>" class="fancybox">
+          <%= image_tag @picture.image.url(:original) %>
+      </a>
+    </div>
+
+    <div class="span6 picture_display_text">
+      <div>
+        <span>Item ID:</span>
+        <%= @picture.item_id %>
+      </div>
+      <div class="picture_display_title">
+        <%= @picture.title %>
+      </div>
+      <div>
+        <%= @picture.caption %>
+      </div>
+      <div>
+        <span>Category:</span>
+        <!-- <%= %> -->
+      </div>
+      <div>
+        <span>Creation Date:</span>
+        <%= @picture.creation_date %>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<hr>
+<div class="picture-buttons">
+  <%= link_to 'Back', '#', class: 'back_link picture-button' %>
+</div>

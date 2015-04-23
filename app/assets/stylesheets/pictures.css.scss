@@ -7,7 +7,7 @@
   height: 350px;
   padding: 20px;
   margin: 10px 20px 10px 0;
-  border: 1px solid lightgrey;
+  /*border: 1px solid lightgrey;*/
 }
 
 .image_pic_img {
@@ -44,6 +44,27 @@
   text-decoration: none;
 }
 
+.picture_display {
+  margin-top: 30px;
+}
+
+.picture_display_image {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.picture_display_text {
+  margin-bottom: 50px;
+}
+
+.picture_display_text div {
+  margin-bottom: 20px;
+}
+
+.picture_display_title {
+  font-weight: bold;
+}
+
 .picture-buttons {
   text-align: center;
   margin: 50px 0;
@@ -56,4 +77,9 @@
   padding: 20px;
   margin: 0 20px;
   border-radius: 100%;
+}
+
+.actions {
+  padding-top: 10px;
+  text-align: center;
 }
