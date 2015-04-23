@@ -11,6 +11,15 @@
         <%= form.text_field :title, class: "user-field" %>
       </div>
       <div class="field">
+        <%= form.label "Gallery" %>
+        <% @galleries.each do |gallery| %>
+        <div>
+          <%= check_box_tag "picture[gallery_ids][]", gallery.id, @picture.galleries.include?(gallery) %>
+          <%= gallery.name %>
+        </div>
+        <% end %>
+      </div>
+      <div class="field">
         <%= form.label :caption %>
         <%= form.text_area :caption, rows: 5, class: "user-field" %>
       </div>

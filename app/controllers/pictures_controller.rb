@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
 
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :set_galleries, only: [:new, :edit]
 
   def index
     @pictures = Picture.all.order("item_id ASC")
@@ -19,6 +20,9 @@ class PicturesController < ApplicationController
   end
 
   def update
+    # this is needed so uncheck all galleries also work properly
+    params[:picture][:gallery_ids] ||= []
+
     if @picture.update( picture_params )
       @picture.save
       redirect_to @picture
@@ -49,10 +53,15 @@ class PicturesController < ApplicationController
   def set_picture
     @picture = Picture.find(params[:id])
   end
+  private
+
+  def set_galleries
+    @galleries = Gallery.all.order("name ASC")
+  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def picture_params
-    params.require(:picture).permit(:title, :item_id, :caption, :creation_date, :image)
+    params.require(:picture).permit(:title, :item_id, :caption, :creation_date, :image, :gallery_ids => [])
   end
 
 end

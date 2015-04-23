@@ -24,8 +24,8 @@
         <%= @picture.caption %>
       </div>
       <div>
-        <span>Category:</span>
-        <!-- <%= %> -->
+        <span><%= "Gallery".pluralize(@picture.galleries.count) %>:</span>
+        <%= @picture.galleries.map {|g| g.name}.join(', ') %>
       </div>
       <div>
         <span>Creation Date:</span>
