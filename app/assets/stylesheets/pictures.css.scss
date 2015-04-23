@@ -3,15 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .image_pic {
-  max-width: 300px;
-  margin: 10px 20px 10px 0;
+  width: 300px;
+  height: 350px;
   padding: 20px;
+  margin: 10px 20px 10px 0;
   border: 1px solid lightgrey;
 }
 
-.image_pic img {
-  width: 100%;
+.image_pic_img {
+  height: 200px;
+  padding: 10px;
+  text-align: center;
   /*box-shadow: 3px 3px 5px lightgrey;*/
+}
+
+.image_pic_img img {
+  max-height: 200px;
 }
 
 .image_desc {
@@ -22,7 +29,9 @@
 }
 
 .image_desc p {
-
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .image_links {
@@ -33,4 +42,18 @@
 .image_links a {
   padding: 5px;
   text-decoration: none;
+}
+
+.picture-buttons {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.picture-button {
+  text-align: center;
+  font-size: 1.2em;
+  background: black;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 100%;
 }

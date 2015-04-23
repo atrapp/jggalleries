@@ -1,23 +1,45 @@
 <%= form_for @picture, :html => { :multipart => true } do |form| %>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="row-fluid">
+
+    <div class="span4">
+      <div class="field">
+        <%= form.label "Item ID" %>
+        <%= form.text_field :item_id %>
+      </div>
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "user-field" %>
+      </div>
+      <div class="field">
+        <%= form.label :caption %>
+        <%= form.text_area :caption, rows: 5, class: "user-field" %>
+      </div>
+      <div class="field">
+        <%= form.label "Creation Date" %>
+        <%= form.date_field :creation_date %>
+      </div>
+    </div>
+
+    <div class="span4">
+      <p>
+        <%= form.file_field :image, id: "image_select_button" %>
+        <div class="clear"></div>
+        <% if @picture.image_file_name.nil? %>
+          <%= image_tag 'placeholder.png', id: "image_display" %>
+        <% else %>
+          <%= image_tag @picture.image.url(:medium), id: "image_display" %>
+        <% end %>
+        <!--
+          <a href="/pictures/<%= @picture.id %>/delete_image"><button class="btn">delete Image</button></a>
+        -->
+      </p>
+    </div>
+
+    <div class="span4">
+      <p>test</p>
+    </div>
+
   </div>
-  <div class="field">
-    <%= form.label "Item ID" %>
-    <%= form.text_field :item_id %>
-  </div>
-  <div class="field">
-    <%= form.label :caption %>
-    <%= form.text_field :caption %>
-  </div>
-  <div class="field">
-    <%= form.label "Creation Date" %>
-    <%= form.text_field :creation_date %>
-  </div>
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-  <div class="actions"><%= form.submit %></div>
+  <hr>
+  <div class="actions center"><%= form.submit %></div>
 <% end %>

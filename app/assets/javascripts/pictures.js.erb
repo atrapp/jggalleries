@@ -1,0 +1,22 @@
+$(function(){
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+      f=files[0]
+      // Only process image files.
+      if (f.type.match('image.*')) {
+        var reader = new FileReader();
+        reader.onload = (function(File) {
+          return function(e) {
+            // alert(e.target.result);
+            document.getElementById("image_display").src=e.target.result;
+          };
+        })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+      }
+    }
+  document.getElementById('image_select_button').addEventListener('change', handleFileSelect, false);
+
+})

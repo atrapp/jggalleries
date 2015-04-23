@@ -57,6 +57,10 @@
   padding-top: 20px;
 }
 
+.field .user-field {
+  width: 100%;
+}
+
 /*.shrink {
   opacity: 0.4;
   height: 50px;

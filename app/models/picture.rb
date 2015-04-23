@@ -6,4 +6,10 @@ class Picture < ActiveRecord::Base
     :content_type => { :content_type => ["image/jpeg", "image/jpg", "image/gif", "image/png"] },
     :size => { :less_than => 1.megabytes }
 
+  validates_presence_of :title, on: :create
+  validates_presence_of :item_id, on: :create
+  validates_uniqueness_of :item_id
+  validates_presence_of :caption, on: :create
+  validates_presence_of :creation_date, on: :create
+
 end

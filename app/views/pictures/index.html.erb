@@ -4,22 +4,20 @@
 
 <div class="container">
 
-  <%= link_to 'New picture', new_picture_path, class: "btn pull-left" %>
-
-  <div class="clear"></div>
-
   <% @pictures.each do |picture| %>
 
-    <div class="image_pic pull-left">
+    <div class="image_pic pull-left center">
 
       <a href="<%= picture.image.url(:original) %>" class="fancybox">
-        <%= image_tag picture.image.url(:medium) %>
+        <div class="image_pic_img">
+          <%= image_tag picture.image.url(:medium) %>
+        </div>
       </a>
 
       <div class="image_desc">
         <p><%= picture.item_id %></p>
         <p><%= picture.title %></p>
-        <p><%= picture.caption %></p>
+        <!-- <p><%= picture.caption %></p> -->
         <p><%= picture.creation_date %></p>
       </div>
 
@@ -33,4 +31,10 @@
 
   <% end %>
 
+</div>
+
+<hr>
+<div class="picture-buttons">
+  <%= link_to 'Back', '#', class: 'back_link picture-button' %>
+  <%= link_to 'New picture', new_picture_path, class: 'picture-button' %>
 </div>
