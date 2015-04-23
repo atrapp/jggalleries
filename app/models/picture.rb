@@ -12,5 +12,6 @@ class Picture < ActiveRecord::Base
   validates_presence_of :caption, on: :create
   validates_presence_of :creation_date, on: :create
 
+  has_and_belongs_to_many :galleries
   has_many :picture_formats
 end
