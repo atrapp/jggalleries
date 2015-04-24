@@ -1,0 +1,38 @@
+<div class="large-space"></div>
+
+<h1 class="page-header"><%= @gallery.name %></h1>
+
+<div class="container">
+
+  <% @pictures.each do |picture| %>
+
+    <div class="image_pic pull-left center">
+
+      <a href="<%= picture.image.url(:original) %>" class="fancybox">
+        <div class="image_pic_img">
+          <%= image_tag picture.image.url(:medium) %>
+        </div>
+      </a>
+
+      <div class="image_desc">
+        <p><%= picture.item_id %></p>
+        <p><%= picture.title %></p>
+        <!-- <p><%= picture.caption %></p> -->
+        <p><%= picture.creation_date %></p>
+      </div>
+
+      <div class="image_links">
+        <%= link_to 'Show', picture %>
+      </div>
+
+    </div>
+
+  <% end %>
+
+</div>
+
+<hr>
+<div class="my-buttons">
+  <%= link_to 'Back', '#', class: 'back_link my-button' %>
+  <%= link_to 'New picture', new_picture_path, class: 'my-button' %>
+</div>

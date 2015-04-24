@@ -38,6 +38,11 @@ class GalleriesController < ApplicationController
     end
   end
 
+  def gallery
+    @gallery = Gallery.find_by(:gallery_ident => params[:gallery_ident])
+    @pictures = @gallery.pictures
+  end
+
   private
 
   def set_gallery
@@ -45,7 +50,7 @@ class GalleriesController < ApplicationController
   end
 
   def gallery_params
-    params.require(:gallery).permit(:name, :caption)
+    params.require(:gallery).permit(:gallery_ident, :name, :caption)
   end
 
 end

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :pictures
   resources :galleries
 
+  get '/galleries/g/:gallery_ident' => "galleries#gallery"
+
   get '/admin' => "welcome#admin", :as => :admin
 
   # get '/galleries' => "welcome#galleries"
@@ -24,6 +26,6 @@ Rails.application.routes.draw do
 
   # post '/send_mail' => 'contact#send_mail', :as => :send_mail
 
-  get '/users/:id/delete_avatar' => 'users#delete_avatar'
+  # get '/users/:id/delete_avatar' => 'users#delete_avatar'
 
 end
