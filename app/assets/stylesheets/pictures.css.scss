@@ -19,6 +19,7 @@
 
 .image_pic_img img {
   max-height: 200px;
+  /*box-shadow: 5px 5px 10px lightgrey;*/
 }
 
 .image_desc {
@@ -68,4 +69,20 @@
 .actions {
   padding-top: 10px;
   text-align: center;
+}
+
+.carousel_display {
+  height: 400px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  background-color: lightgrey;
+}
+
+.carousel_display_img {
+  text-align: center;
+}
+
+.carousel_display_img img {
+  margin: 20px;
+  max-height: 360px;
 }

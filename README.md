@@ -1,6 +1,5 @@
-# Pagination theme for [Zurb Foundation](http://foundation.zurb.com)
+# Artist Website
 
-With support for:
+under construction
 
-- erb
-- haml
+![Jazz Band Drawing](https://github.com/atrapp/jggalleries/raw/master/images/NWP7716.jpg)
