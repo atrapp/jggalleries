@@ -2,4 +2,4 @@
 
 under construction
 
-![Jazz Band Drawing](https://github.com/atrapp/jggalleries/raw/master/images/NWP7716.JPG)
+![Jazz Band Drawing](https://github.com/atrapp/jggalleries/raw/master/images/NWP7716.png)
