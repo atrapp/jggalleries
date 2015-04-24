@@ -25,7 +25,7 @@
       </div>
       <div>
         <span><%= "Gallery".pluralize(@picture.galleries.count) %>:</span>
-        <%= @picture.galleries.map {|g| g.name}.join(', ') %>
+        <%= @picture.galleries.order("name ASC").map {|g| g.name}.join(', ') %>
       </div>
       <div>
         <span>Creation Date:</span>
