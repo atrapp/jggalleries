@@ -61,7 +61,15 @@
   width: 100%;
 }
 
-/*.shrink {
+.carousel-indicators li {
+  background-color: black;
+}
+
+.carousel-indicators .active {
+  background-color: red;
+}
+
+.shrink {
   opacity: 0.4;
   height: 50px;
-}*/
+}

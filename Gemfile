@@ -55,6 +55,7 @@ end
 gem 'backbone-on-rails'
 
 gem "twitter-bootstrap-rails"
+# gem "bootstrap-glyphicons"
 
 gem "font-awesome-rails"
 
