@@ -27,6 +27,18 @@
         <%= form.label "Creation Date" %>
         <%= form.date_field :creation_date %>
       </div>
+      <div class="field">
+        <%= form.label :size %>
+        <%= form.text_field :size %>
+      </div>
+      <div class="field">
+        <%= form.label :price %>
+        <%= form.text_field :price %>
+      </div>
+      <div class="field">
+        <%= form.label :status %>
+        <%= form.select :status, options_for_select([['none'], ['featured'], ['sold']], @picture.status) %>
+      </div>
     </div>
 
     <div class="span4">

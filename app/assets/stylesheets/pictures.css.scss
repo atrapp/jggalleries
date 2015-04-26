@@ -71,11 +71,18 @@
   text-align: center;
 }
 
+.picture_browsing {
+  text-align: center;
+}
+
+.picture_browsing span{
+  padding: 0 10px;
+}
+
 .carousel_display {
   height: 400px;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
-  /*background-color: lightgrey;*/
 }
 
 .carousel_display_img {

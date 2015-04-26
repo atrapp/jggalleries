@@ -14,4 +14,13 @@ class Picture < ActiveRecord::Base
 
   has_and_belongs_to_many :galleries
   has_many :picture_formats
+
+  def next
+    Picture.all.order("item_id ASC").where("item_id > ?", item_id).first
+  end
+
+  def previous
+    Picture.all.order("item_id ASC").where("item_id < ?", item_id).last
+  end
+
 end

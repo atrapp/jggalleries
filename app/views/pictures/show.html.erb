@@ -2,6 +2,11 @@
 
 <h1 class="page-header">Picture details</h1>
 
+<div class="picture_browsing">
+  <span><%= link_to 'Previous', @picture.previous %></span>
+  <span><%= link_to 'Next', @picture.next %></span>
+</div>
+
 <div class="container">
 
   <div class="row-fluid picture_display">
@@ -30,6 +35,20 @@
       <div>
         <span>Creation Date:</span>
         <%= @picture.creation_date %>
+      </div>
+      <div>
+        <span>Size:</span>
+        <%= @picture.size %>
+      </div>
+      <div>
+        <span>Price:</span>
+        <%= number_to_currency(@picture.price) %>
+      </div>
+      <div>
+        <% if @picture.status != "none" %>
+          <span>Status:</span>
+          <%= @picture.status %>
+        <% end %>
       </div>
     </div>
 

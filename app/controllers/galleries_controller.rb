@@ -40,7 +40,8 @@ class GalleriesController < ApplicationController
 
   def gallery
     @gallery = Gallery.find_by(:gallery_ident => params[:gallery_ident])
-    @pictures = @gallery.pictures
+    @pictures = @gallery.pictures.order("item_id ASC")
+    @pictures_featured = @gallery.pictures.order("item_id ASC").where(:status => "featured")
   end
 
   private

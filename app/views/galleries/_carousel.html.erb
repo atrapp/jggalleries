@@ -3,7 +3,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <% i = 0 %>
-    <% while i < @pictures.length do %>
+    <% while i < @pictures_featured.length do %>
       <% if i == 0 %>
         <li data-target="#myCarousel" data-slide-to="<%= i %>" class="active"></li>
       <% else %>
@@ -15,9 +15,9 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <% @pictures.each do |picture| %>
+    <% @pictures_featured.each do |picture| %>
 
-      <% if picture.id == @pictures.first.id %>
+      <% if picture.id == @pictures_featured.first.id %>
         <div class="item active">
       <% else %>
           <div class="item">

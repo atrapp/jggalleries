@@ -20,6 +20,20 @@ $(function(){
 
   Jggalleries.initialize();
 
+  // .shrink and .expand classes are in bootstrap_and_overrides.css:
+  // ---------------------------------------------------------------
+  // $(window).scroll(function(){
+  //   var scroll = $(window).scrollTop();
+  //   if (scroll > 70 ) {
+  //     $('.navbar .navbar-inner').removeClass('expand');
+  //     $('.navbar .navbar-inner').addClass('shrink');
+  //   };
+  //   if (scroll <= 70 ) {
+  //     $('.navbar .navbar-inner').removeClass('shrink');
+  //     $('.navbar .navbar-inner').addClass('expand');
+  //   };
+  // });
+
   var galleries = ['#gallery1','#gallery2','#gallery3','#gallery4'];
   var src = "";
   galleries.forEach(function(gallery) {

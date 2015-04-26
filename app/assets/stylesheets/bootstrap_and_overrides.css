@@ -30,7 +30,7 @@
 
 .navbar .navbar-inner {
   background: white;
-  height: 180px;
+  height: 180px; /*100px;*/
 }
 
 .navbar .navbar-inner .brand {
@@ -70,6 +70,15 @@
 }
 
 .shrink {
-  opacity: 0.4;
-  height: 50px;
+  height: 110px !important;
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+}
+
+.expand {
+  height: 180px !important;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }

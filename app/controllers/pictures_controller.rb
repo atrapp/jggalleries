@@ -61,7 +61,7 @@ class PicturesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def picture_params
-    params.require(:picture).permit(:title, :item_id, :caption, :creation_date, :image, :gallery_ids => [])
+    params.require(:picture).permit(:item_id, :title, :caption, :creation_date, :size, :price, :status, :image, :gallery_ids => [])
   end
 
 end
